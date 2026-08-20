@@ -691,6 +691,146 @@ section[id] { scroll-margin-top: 84px; }
 }
 .tours-custom-banner p { color: var(--dimmed); font-size: 0.92rem; }
 
+/* ── Botón "ver itinerario completo" dentro de la tarjeta ── */
+.tour-more-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--y);
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 0;
+  margin-bottom: 18px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.tour-more-link:hover { color: var(--cream); }
+
+/* ============================================================
+   MODAL DE ITINERARIO COMPLETO
+   ============================================================ */
+.tour-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: rgba(6,10,8,0.9);
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+  opacity: 0;
+  pointer-events: none;
+  overflow-y: auto;
+  transition: opacity 0.25s ease;
+}
+.tour-modal.is-open { opacity: 1; pointer-events: auto; }
+.tour-modal-panel {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  height: fit-content;
+  margin: auto;
+  background: var(--bg-alt);
+  border: 1px solid rgba(255,204,0,0.25);
+  border-radius: 14px;
+  padding: 44px 40px 40px;
+}
+.tour-modal-close {
+  position: absolute;
+  top: 18px; right: 18px;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(245,237,213,0.1);
+  border: 1px solid rgba(245,237,213,0.3);
+  color: var(--cream);
+  font-size: 1.3rem;
+  line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+}
+.tour-modal-close:hover { background: rgba(255,204,0,0.18); border-color: var(--y); }
+.tour-modal-duration {
+  display: inline-block;
+  background: rgba(255,204,0,0.12);
+  color: var(--y);
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+.tour-modal-title {
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 3vw, 1.6rem);
+  font-weight: 600;
+  margin-bottom: 14px;
+  padding-right: 26px;
+}
+.tour-modal-intro {
+  color: var(--dimmed);
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(245,237,213,0.12);
+}
+.tour-modal-day, .tour-modal-section { margin-bottom: 30px; }
+.tour-modal-day h4, .tour-modal-section h4 {
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--y);
+  margin-bottom: 16px;
+}
+
+/* Filas de horario: Piedra del Elefante y días de Salto Ángel */
+.itinerary-schedule { display: flex; flex-direction: column; gap: 16px; }
+.itinerary-row { display: grid; grid-template-columns: 128px 1fr; gap: 16px; }
+.itinerary-time {
+  height: fit-content;
+  background: rgba(245,237,213,0.08);
+  color: var(--cream);
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 20px;
+  padding: 5px 8px;
+}
+.itinerary-info h5 { font-size: 0.96rem; font-weight: 600; color: var(--cream); margin-bottom: 4px; }
+.itinerary-info p { font-size: 0.86rem; color: var(--dimmed); }
+
+/* Listas narrativas: City Tour y paseo en bote */
+.tour-modal-list { display: flex; flex-direction: column; gap: 16px; }
+.tour-modal-list > li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.9rem;
+  color: var(--dimmed);
+}
+.tour-modal-list > li::before {
+  content: '';
+  position: absolute; left: 0; top: 7px;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--y);
+}
+.tour-modal-list strong { color: var(--cream); }
+.tour-modal-sublist { margin-top: 10px; display: flex; flex-direction: column; gap: 10px; }
+.tour-modal-sublist li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 0.85rem;
+  color: var(--dimmed);
+}
+.tour-modal-sublist li::before { content: '–'; position: absolute; left: 0; color: var(--y); }
+
+@media (max-width: 560px) {
+  .tour-modal { padding: 40px 14px; }
+  .tour-modal-panel { padding: 34px 22px 30px; }
+  .itinerary-row { grid-template-columns: 1fr; gap: 6px; }
+  .itinerary-time { width: fit-content; }
+}
+
 /* ============================================================
    DESTINOS
    ============================================================ */

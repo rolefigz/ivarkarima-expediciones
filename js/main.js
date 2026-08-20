@@ -105,6 +105,33 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.key === "Escape" && lightbox.classList.contains("is-open")) closeLightbox();
   });
 
+  /* ── Modal de itinerario completo ("Ver más" de cada tour) ── */
+  function closeTourModal(modal) {
+    modal.classList.remove("is-open");
+    document.body.style.overflow = "";
+  }
+  document.querySelectorAll("[data-tour-modal]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var modal = document.getElementById(btn.getAttribute("data-tour-modal"));
+      if (modal) {
+        modal.classList.add("is-open");
+        document.body.style.overflow = "hidden";
+      }
+    });
+  });
+  document.querySelectorAll(".tour-modal").forEach(function (modal) {
+    var closeBtn = modal.querySelector(".tour-modal-close");
+    if (closeBtn) closeBtn.addEventListener("click", function () { closeTourModal(modal); });
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) closeTourModal(modal);
+    });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      document.querySelectorAll(".tour-modal.is-open").forEach(closeTourModal);
+    }
+  });
+
   /* ── Carrusel de testimonios ────────────────────────────── */
   var track = document.getElementById("testimonialsTrack");
   var prevBtn = document.getElementById("testiPrev");

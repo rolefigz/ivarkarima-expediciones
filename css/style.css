@@ -221,11 +221,11 @@ section[id] { scroll-margin-top: 84px; }
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 28px;
 }
 .nav-links {
   display: flex;
-  gap: 26px;
+  gap: 24px;
 }
 .nav-links a {
   text-decoration: none;
@@ -253,6 +253,7 @@ section[id] { scroll-margin-top: 84px; }
   align-items: center;
   gap: 16px;
 }
+.nav-side .btn-whatsapp { white-space: nowrap; padding: 11px 18px; }
 
 .lang-switch {
   display: flex;
@@ -389,8 +390,8 @@ section[id] { scroll-margin-top: 84px; }
   .nav-side .btn-whatsapp { padding: 10px; }
 }
 @media (max-width: 480px) {
-  .brand-name { display: none; }
   .lang-switch button { padding: 6px 9px; }
+  .brand img { height: 40px; }
 }
 @media (min-width: 1101px) {
   .mobile-menu, .mobile-backdrop { display: none; }
@@ -517,7 +518,7 @@ section[id] { scroll-margin-top: 84px; }
   margin-bottom: 6px;
 }
 .stat-label {
-  font-size: 0.82rem;
+  font-size: 0.86rem;
   color: rgba(245,237,213,0.88);
   letter-spacing: 0.02em;
 }
@@ -543,10 +544,12 @@ section[id] { scroll-margin-top: 84px; }
 .about-quote {
   margin: 28px 0;
   padding: 26px 28px;
-  background: var(--ink);
+  background:
+    linear-gradient(90deg, var(--y) 0 33.33%, var(--b) 33.33% 66.66%, var(--r) 66.66%) top / 100% 2px no-repeat,
+    rgba(245, 237, 213, 0.05);
   color: var(--cream);
-  border-left: 4px solid var(--y);
-  border-radius: 2px;
+  border: 1px solid rgba(245, 237, 213, 0.12);
+  border-radius: 10px;
   font-family: var(--serif);
   font-style: italic;
   font-size: 1.08rem;
@@ -567,46 +570,46 @@ section[id] { scroll-margin-top: 84px; }
   border: 1px solid rgba(143,224,176,0.3);
   color: var(--g-light);
   border-radius: 30px;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 600;
 }
+.pill svg { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
 @media (max-width: 860px) {
   .about-grid { grid-template-columns: 1fr; gap: 36px; }
 }
 
 /* ── Placeholder de foto (reutilizable) ─────────────────── */
+/* Paisaje abstracto de marca (cielo + dos siluetas de tepuy) que ocupa
+   el lugar de una foto pendiente. Tres "luces" alternas: amanecer
+   dorado, cielo azul y ocaso rojo, tomadas de la bandera. */
 .photo-placeholder {
+  --ph-glow: rgba(255, 204, 0, 0.26);
+  --ph-sky: #1B4331;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+  overflow: hidden;
+  display: block;
   min-height: 220px;
   width: 100%;
   height: 100%;
-  background:
-    repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0 2px, transparent 2px 14px),
-    linear-gradient(160deg, #16261C, #0E1811);
-  border: 1.5px dashed rgba(245,237,213,0.28);
   border-radius: 10px;
-  color: rgba(245,237,213,0.55);
-  text-align: center;
-  padding: 20px;
-}
-.section-light .photo-placeholder {
   background:
-    repeating-linear-gradient(135deg, rgba(35,32,26,0.03) 0 2px, transparent 2px 14px),
-    linear-gradient(160deg, #E9DEBC, #EFE6C8);
-  border-color: rgba(35,32,26,0.25);
-  color: rgba(35,32,26,0.55);
+    radial-gradient(110% 80% at 72% 6%, var(--ph-glow), transparent 60%),
+    linear-gradient(180deg, var(--ph-sky) 0%, #0E1F16 62%, var(--bg) 100%);
 }
-.photo-placeholder svg { width: 30px; height: 30px; opacity: 0.7; }
-.photo-placeholder span {
-  font-size: 0.76rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  max-width: 220px;
+.photo-placeholder svg {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  width: 100%;
+}
+.photo-placeholder .ph-far { height: 62%; fill: rgba(245, 237, 213, 0.07); }
+.photo-placeholder .ph-near { height: 44%; fill: rgba(11, 20, 16, 0.88); }
+:is(.tours-grid, .destinations-grid, .gallery-grid) > :nth-child(3n+2) .photo-placeholder {
+  --ph-glow: rgba(0, 144, 212, 0.3);
+  --ph-sky: #173549;
+}
+:is(.tours-grid, .destinations-grid, .gallery-grid) > :nth-child(3n) .photo-placeholder {
+  --ph-glow: rgba(207, 26, 44, 0.3);
+  --ph-sky: #3A2320;
 }
 .about-photo.photo-placeholder { aspect-ratio: 4/5; min-height: 320px; }
 
@@ -697,7 +700,7 @@ section[id] { scroll-margin-top: 84px; }
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  font-size: 0.84rem;
+  font-size: 0.88rem;
   color: var(--dimmed);
 }
 .tour-includes svg {
@@ -909,7 +912,7 @@ section[id] { scroll-margin-top: 84px; }
   color: var(--cream);
 }
 .dest-caption p {
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   color: var(--dimmed);
 }
 @media (max-width: 860px) {
@@ -945,6 +948,7 @@ section[id] { scroll-margin-top: 84px; }
   transition: transform 0.4s ease;
 }
 .gallery-item:hover img { transform: scale(1.05); }
+.gallery-item.is-placeholder { cursor: default; }
 .gallery-item .photo-placeholder { aspect-ratio: 1/1; min-height: 0; }
 .gallery-item:nth-child(3n+1) .photo-placeholder,
 .gallery-item:nth-child(3n+1) img { aspect-ratio: 3/4; }
@@ -1400,7 +1404,6 @@ section[id] { scroll-margin-top: 84px; }
 }
 .error-page .error-en { font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: var(--y); margin-bottom: 20px; }
 .error-page p { color: var(--dimmed); max-width: 560px; margin-bottom: 32px; }
-.error-page .error-en { margin-bottom: 20px; }
 
 .legal-page {
   max-width: 760px;

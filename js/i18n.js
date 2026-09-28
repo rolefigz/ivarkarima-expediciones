@@ -33,7 +33,6 @@ window.IVK_I18N = {
     "hero.img.alt": "Vista del tepuy Roraima al amanecer en la Gran Sabana",
     "tour1.img.alt": "Tepuy Roraima sobre la Gran Sabana",
     "gallery.1.caption": "Monte Roraima al amanecer",
-    "placeholder.label": "Foto próximamente",
 
     "hero.badge": "Guías nativos Pemón · Desde 1996",
     "hero.title": "Expediciones al corazón de <em>la Gran Sabana</em>",
@@ -53,10 +52,9 @@ window.IVK_I18N = {
     "about.p1": "El nombre Ivarkarima honra al tepuy homónimo, parte de la cadena oriental de la Gran Sabana. Desde 1996, fundada por [Nombre del fundador], nuestra familia ha guiado a viajeros de todo el mundo por los caminos que conocemos desde niños.",
     "about.p2": "No improvisamos rutas ni tercerizamos la experiencia: nuestro equipo de guías, choferes y baquianos lleva años trabajando junto a las comunidades Pemón, con un profundo respeto por su cultura y por la naturaleza que nos recibe en cada expedición.",
     "about.quote": "“No somos turistas — somos de aquí. Cada sendero, cada cascada, cada amanecer sobre los tepuyes los conocemos como nuestra propia casa.”",
-    "about.badge1": "🤝 Respeto por las comunidades Pemón",
-    "about.badge2": "🌿 Turismo responsable",
-    "about.badge3": "👨‍👩‍👧‍👦 Equipo familiar desde 1996",
-    "about.photo.placeholder": "Agrega aquí una foto real del fundador o del equipo",
+    "about.badge1": "Respeto por las comunidades Pemón",
+    "about.badge2": "Turismo responsable",
+    "about.badge3": "Equipo familiar desde 1996",
 
     "tours.eyebrow": "Nuestras expediciones",
     "tours.title": "Vive la Gran Sabana <em>a tu manera</em>",
@@ -227,7 +225,6 @@ window.IVK_I18N = {
     "gallery.eyebrow": "Galería",
     "gallery.title": "Momentos de <em>la expedición</em>",
     "gallery.subtitle": "Paisajes, campamentos y viajeros reales en la Gran Sabana.",
-    "gallery.placeholder": "Agrega foto aquí",
 
     "why.eyebrow": "Por qué elegirnos",
     "why.title": "Experiencia que <em>se siente</em>",
@@ -338,7 +335,6 @@ window.IVK_I18N = {
     "hero.img.alt": "View of the Roraima tepui at dawn over the Gran Sabana",
     "tour1.img.alt": "Roraima tepui above the Gran Sabana",
     "gallery.1.caption": "Mount Roraima at dawn",
-    "placeholder.label": "Photo coming soon",
 
     "hero.badge": "Native Pemón guides · Since 1996",
     "hero.title": "Expeditions into the heart of <em>the Gran Sabana</em>",
@@ -358,10 +354,9 @@ window.IVK_I18N = {
     "about.p1": "The name Ivarkarima honors the tepui of the same name, part of the eastern range of the Gran Sabana. Since 1996, founded by [Founder's name], our family has guided travelers from around the world along paths we've known since childhood.",
     "about.p2": "We don't improvise routes or outsource the experience: our team of guides, drivers and local trackers has worked together for years alongside Pemón communities, with deep respect for their culture and for the nature that welcomes us on every expedition.",
     "about.quote": "“We're not tourists — this is home. Every trail, every waterfall, every sunrise over the tepuis, we know like our own backyard.”",
-    "about.badge1": "🤝 Respect for Pemón communities",
-    "about.badge2": "🌿 Responsible tourism",
-    "about.badge3": "👨‍👩‍👧‍👦 Family-run since 1996",
-    "about.photo.placeholder": "Add a real photo of the founder or team here",
+    "about.badge1": "Respect for Pemón communities",
+    "about.badge2": "Responsible tourism",
+    "about.badge3": "Family-run since 1996",
 
     "tours.eyebrow": "Our expeditions",
     "tours.title": "Experience the Gran Sabana <em>your way</em>",
@@ -532,7 +527,6 @@ window.IVK_I18N = {
     "gallery.eyebrow": "Gallery",
     "gallery.title": "Moments from <em>the expedition</em>",
     "gallery.subtitle": "Landscapes, campsites and real travelers in the Gran Sabana.",
-    "gallery.placeholder": "Add a photo here",
 
     "why.eyebrow": "Why choose us",
     "why.title": "Experience you can <em>feel</em>",

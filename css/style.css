@@ -1327,10 +1327,85 @@ section[id] { scroll-margin-top: 84px; }
 /* ============================================================
    PÁGINAS LEGALES (privacy.html / terms.html)
    ============================================================ */
+/* Cabecera y pie mínimos (páginas legales y 404) */
+.page-min {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg);
+}
+.mini-header {
+  padding: 22px 0 18px;
+  border-bottom: 1px solid rgba(245,237,213,0.1);
+  background: var(--bg-alt);
+}
+.mini-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+.mini-header .brand img { height: 42px; width: auto; }
+.mini-header .back-link { margin: 0; }
+.back-sep { opacity: 0.5; }
+.mini-footer {
+  margin-top: auto;
+  padding: 26px 0;
+  background: #070C09;
+  border-top: 1px solid rgba(245,237,213,0.08);
+  font-size: 0.78rem;
+  color: rgba(245,237,213,0.62);
+}
+.mini-footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 24px;
+}
+.mini-footer nav { display: flex; gap: 20px; }
+.mini-footer a { color: var(--dimmed); text-underline-offset: 3px; }
+.mini-footer a:hover { color: var(--cream); }
+
+/* 404 */
+.error-page {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+  overflow: hidden;
+}
+.error-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(11,20,16,0.96) 0%, rgba(11,20,16,0.8) 55%, rgba(11,20,16,0.55) 100%),
+    url('../assets/img/opt/roraima-1280.webp') center 35% / cover no-repeat;
+}
+.error-content { position: relative; max-width: 760px; margin: 0; }
+.error-page .error-code {
+  font-family: var(--serif);
+  font-size: clamp(4rem, 14vw, 8rem);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--y);
+  margin-bottom: 12px;
+}
+.error-page h1 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  line-height: 1.12;
+  margin-bottom: 8px;
+}
+.error-page .error-en { font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: var(--y); margin-bottom: 20px; }
+.error-page p { color: var(--dimmed); max-width: 560px; margin-bottom: 32px; }
+.error-page .error-en { margin-bottom: 20px; }
+
 .legal-page {
   max-width: 760px;
   margin: 0 auto;
-  padding: 160px 24px 100px;
+  padding: 56px 24px 80px;
   color: var(--cream);
 }
 .legal-page h1 {
@@ -1347,16 +1422,25 @@ section[id] { scroll-margin-top: 84px; }
 }
 .legal-page p, .legal-page li { color: var(--dimmed); font-size: 0.95rem; margin-bottom: 12px; }
 .legal-page ul { padding-left: 22px; list-style: disc; }
-.legal-page a { color: var(--b); }
+.legal-page a { color: #5CC2F2; text-underline-offset: 3px; }
+.legal-page .draft-note {
+  padding: 16px 18px;
+  border: 1px dashed rgba(255,204,0,0.45);
+  border-radius: 8px;
+  background: rgba(255,204,0,0.06);
+}
 .back-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  min-height: 32px;
   margin-bottom: 30px;
   color: var(--y);
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
+  font-weight: 500;
 }
+.back-link:hover { color: var(--cream); }
 
 /* ============================================================
    GENERALES DE SECCIÓN / RESPONSIVE

@@ -3,18 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ivarkarima Expediciones — Tours a la Gran Sabana, Roraima y Salto Ángel | Venezuela</title>
-<meta name="description" content="Casi 30 años guiando expediciones por la Gran Sabana venezolana: Monte Roraima, Salto Ángel, Canaima y Kavac. Guías nativos Pemón bilingües. Reserva por WhatsApp.">
-<meta name="keywords" content="tours Gran Sabana, expediciones Roraima, viaje Salto Ángel, turismo Canaima, tours estado Bolívar Venezuela">
+<title>Ivarkarima Expediciones | Tours a Roraima, Salto Ángel y la Gran Sabana</title>
+<meta name="description" content="Expediciones por la Gran Sabana venezolana desde 1996: Monte Roraima, Salto Ángel, Canaima y Kavac con guías nativos Pemón bilingües. Reserva por WhatsApp.">
 <meta name="author" content="Ivarkarima Expediciones, C.A.">
 <link rel="canonical" href="https://ivarkarima.com/">
+<link rel="alternate" hreflang="es" href="https://ivarkarima.com/">
+<link rel="alternate" hreflang="en" href="https://ivarkarima.com/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://ivarkarima.com/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ivarkarima Expediciones">
-<meta property="og:title" content="Ivarkarima Expediciones — Tours a la Gran Sabana, Roraima y Salto Ángel">
-<meta property="og:description" content="Casi 30 años guiando expediciones por la Gran Sabana venezolana. Guías nativos Pemón bilingües. Reserva por WhatsApp.">
-<meta property="og:image" content="https://ivarkarima.com/assets/img/roraima.jpg">
+<meta property="og:title" content="Ivarkarima Expediciones — Tours a Roraima, Salto Ángel y la Gran Sabana">
+<meta property="og:description" content="Expediciones por la Gran Sabana venezolana desde 1996. Guías nativos Pemón bilingües. Reserva por WhatsApp.">
+<meta property="og:image" content="https://ivarkarima.com/assets/img/opt/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="El tepuy Roraima entre nubes sobre la Gran Sabana, Venezuela">
 <meta property="og:url" content="https://ivarkarima.com/">
 <meta property="og:locale" content="es_VE">
 <meta property="og:locale:alternate" content="en_US">
@@ -22,8 +27,9 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ivarkarima Expediciones — Gran Sabana, Venezuela">
-<meta name="twitter:description" content="Casi 30 años guiando expediciones por la Gran Sabana venezolana. Guías nativos Pemón bilingües.">
-<meta name="twitter:image" content="https://ivarkarima.com/assets/img/roraima.jpg">
+<meta name="twitter:description" content="Expediciones por la Gran Sabana venezolana desde 1996. Guías nativos Pemón bilingües.">
+<meta name="twitter:image" content="https://ivarkarima.com/assets/img/opt/og-image.jpg">
+<meta name="twitter:image:alt" content="El tepuy Roraima entre nubes sobre la Gran Sabana, Venezuela">
 
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/opt/icon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/img/opt/icon-192.png">
@@ -45,28 +51,206 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "TravelAgency",
-  "name": "Ivarkarima Expediciones, C.A.",
-  "image": "https://ivarkarima.com/assets/img/roraima.jpg",
-  "url": "https://ivarkarima.com/",
-  "telephone": "+58-424-954-2480",
-  "email": "ivarkarima@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressRegion": "Estado Bolívar",
-    "addressLocality": "Gran Sabana",
-    "addressCountry": "VE"
-  },
-  "areaServed": "Gran Sabana, Estado Bolívar, Venezuela",
-  "foundingDate": "1996",
-  "makesOffer": [
-    { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Gran Sabana Clásica", "description": "5 días / 4 noches recorriendo saltos de agua, la Quebrada de Jaspe y comunidades Pemón en 4x4." } },
-    { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Ascenso al Roraima", "description": "6 días / 5 noches de trekking al tepuy Roraima, el 'mundo perdido'." } },
-    { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Salto Ángel (Canaima)", "description": "3 días / 2 noches en curiara hasta la caída de agua más alta del mundo." } },
-    { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Kavac", "description": "Excursión al cañón y la cueva de Kavac en territorio Pemón." } },
-    { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Piedra del Elefante", "description": "Ascenso de día completo al monolito del Escudo Guayanés con descanso en campamento recreacional." } },
-    { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "City Tour Histórico (Ciudad Bolívar)", "description": "Tour guiado de 6 horas por el Casco Histórico de Ciudad Bolívar desde Puerto Ordaz." } },
-    { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Paseo en Bote por el Caroní y el Orinoco", "description": "Paseo en bote de 2 horas al encuentro de las aguas Caroní-Orinoco y los saltos de Cachamay y La Llovizna." } }
+  "@graph": [
+    {
+      "@type": "TravelAgency",
+      "@id": "https://ivarkarima.com/#agency",
+      "name": "Ivarkarima Expediciones, C.A.",
+      "alternateName": "Ivarkarima Expediciones",
+      "url": "https://ivarkarima.com/",
+      "logo": "https://ivarkarima.com/assets/img/opt/logo-512.png",
+      "image": "https://ivarkarima.com/assets/img/opt/og-image.jpg",
+      "description": "Expediciones por la Gran Sabana venezolana desde 1996: Monte Roraima, Salto Ángel, Canaima y Kavac con guías nativos Pemón bilingües. Reserva por WhatsApp.",
+      "telephone": "+58-424-954-2480",
+      "email": "ivarkarima@gmail.com",
+      "foundingDate": "1996",
+      "priceRange": "Consultar precio por WhatsApp",
+      "knowsLanguage": [
+        "es",
+        "en"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Estado Bolívar",
+        "addressLocality": "Gran Sabana",
+        "addressCountry": "VE"
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Gran Sabana, Estado Bolívar, Venezuela",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 5.0,
+            "longitude": -61.5
+          }
+        },
+        {
+          "@type": "Place",
+          "name": "Parque Nacional Canaima",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 6.2333,
+            "longitude": -62.85
+          }
+        },
+        {
+          "@type": "Place",
+          "name": "Ciudad Guayana y Ciudad Bolívar, Venezuela"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+58-424-954-2480",
+        "contactType": "reservations",
+        "availableLanguage": [
+          "Spanish",
+          "English"
+        ]
+      },
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "TouristTrip",
+            "name": "Gran Sabana Clásica",
+            "description": "5 días / 4 noches recorriendo saltos de agua, la Quebrada de Jaspe y comunidades Pemón en 4x4."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "TouristTrip",
+            "name": "Ascenso al Roraima",
+            "description": "6 días / 5 noches de trekking al tepuy Roraima, el 'mundo perdido'."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "TouristTrip",
+            "name": "Salto Ángel (Canaima)",
+            "description": "3 días / 2 noches en curiara hasta la caída de agua más alta del mundo."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "TouristTrip",
+            "name": "Kavac",
+            "description": "Excursión al cañón y la cueva de Kavac en territorio Pemón."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "TouristTrip",
+            "name": "Piedra del Elefante",
+            "description": "Ascenso de día completo al monolito del Escudo Guayanés con descanso en campamento recreacional."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "TouristTrip",
+            "name": "City Tour Histórico (Ciudad Bolívar)",
+            "description": "Tour guiado de 6 horas por el Casco Histórico de Ciudad Bolívar desde Puerto Ordaz."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "TouristTrip",
+            "name": "Paseo en Bote por el Caroní y el Orinoco",
+            "description": "Paseo en bote de 2 horas al encuentro de las aguas Caroní-Orinoco y los saltos de Cachamay y La Llovizna."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ivarkarima.com/#website",
+      "url": "https://ivarkarima.com/",
+      "name": "Ivarkarima Expediciones",
+      "inLanguage": [
+        "es",
+        "en"
+      ],
+      "publisher": {
+        "@id": "https://ivarkarima.com/#agency"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://ivarkarima.com/#faq",
+      "inLanguage": "es",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la mejor época para viajar a la Gran Sabana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La temporada seca (noviembre a abril) ofrece caminos más accesibles y cielos despejados. La temporada de lluvias (mayo a octubre) trae los saltos de agua en su máximo esplendor. Cada época tiene su encanto — te recomendamos según el tour que elijas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué nivel físico se requiere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende de la expedición. La Gran Sabana Clásica y Canaima son accesibles para casi cualquier persona con condición física básica. El ascenso al Roraima exige buena condición física, ya que implica varios días de trekking."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué debo llevar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ropa de secado rápido, impermeable ligero, calzado de trekking, protector solar, repelente y una linterna. Al confirmar tu reserva te enviamos una lista completa según el tour."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se paga y cómo funciona la reserva?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Coordinamos el pago y las condiciones directamente por WhatsApp según el tour, el grupo y la temporada. Solicitamos un abono para confirmar la reserva y el resto se coordina antes o durante la expedición."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es seguro viajar a la Gran Sabana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Llevamos casi 30 años operando en la zona con protocolos de seguridad probados, guías con experiencia y conocimiento local real del terreno y del clima."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la edad mínima para participar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Varía según la expedición: los tours de baja exigencia física reciben familias con niños, mientras que el ascenso al Roraima recomienda una edad mínima por el esfuerzo físico. Consúltanos tu caso particular."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué idiomas trabajan los guías?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nuestros guías nativos Pemón trabajan en español e inglés."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se llega a la Gran Sabana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generalmente por vía terrestre hasta Santa Elena de Uairén, o por vía aérea hasta Canaima según el tour. Te damos indicaciones detalladas al confirmar tu expedición."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>

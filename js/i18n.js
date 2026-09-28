@@ -15,7 +15,7 @@ window.IVK_I18N = {
     "nav.contact": "Contacto",
     "nav.cta": "Reservar por WhatsApp",
 
-    "meta.title": "Ivarkarima Expediciones — Tours a la Gran Sabana, Roraima y Salto Ángel | Venezuela",
+    "meta.title": "Ivarkarima Expediciones | Tours a Roraima, Salto Ángel y la Gran Sabana",
     "meta.desc": "Expediciones por la Gran Sabana venezolana desde 1996: Monte Roraima, Salto Ángel, Canaima y Kavac con guías nativos Pemón bilingües. Reserva por WhatsApp.",
     "a11y.skip": "Saltar al contenido",
     "a11y.mainNav": "Navegación principal",
@@ -320,7 +320,7 @@ window.IVK_I18N = {
     "nav.contact": "Contact",
     "nav.cta": "Book on WhatsApp",
 
-    "meta.title": "Ivarkarima Expediciones — Gran Sabana, Roraima & Angel Falls Tours | Venezuela",
+    "meta.title": "Ivarkarima Expediciones | Roraima, Angel Falls & Gran Sabana Tours",
     "meta.desc": "Expeditions across Venezuela's Gran Sabana since 1996: Mount Roraima, Angel Falls, Canaima and Kavac with bilingual native Pemón guides. Book on WhatsApp.",
     "a11y.skip": "Skip to content",
     "a11y.mainNav": "Main navigation",
@@ -629,7 +629,15 @@ window.IVK_I18N = {
     try { window.localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* sin persistencia */ }
   }
 
+  // ?lang=en da una URL propia a la versión en inglés (hreflang / compartir)
+  function readUrlLang() {
+    var match = /[?&]lang=([a-z]{2})(?:&|$)/.exec(window.location.search);
+    return match ? match[1] : null;
+  }
+
   function getInitialLang() {
+    var fromUrl = readUrlLang();
+    if (fromUrl && window.IVK_I18N[fromUrl]) return fromUrl;
     var saved = readStoredLang();
     if (saved && window.IVK_I18N[saved]) return saved;
     var browserLang = (navigator.language || "es").slice(0, 2);
@@ -685,6 +693,13 @@ window.IVK_I18N = {
       a.setAttribute("href", waHref(msg));
     });
 
+    var canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      var base = canonical.getAttribute("data-base") || canonical.getAttribute("href");
+      canonical.setAttribute("data-base", base);
+      canonical.setAttribute("href", lang === "es" ? base : base + "?lang=" + lang);
+    }
+
     storeLang(lang);
     window.IVK_CURRENT_LANG = lang;
 
@@ -699,7 +714,12 @@ window.IVK_I18N = {
 
     document.querySelectorAll(".lang-switch button").forEach(function (btn) {
       btn.addEventListener("click", function () {
-        applyLang(btn.getAttribute("data-lang"));
+        var lang = btn.getAttribute("data-lang");
+        applyLang(lang);
+        if (window.history && history.replaceState) {
+          var url = window.location.pathname + (lang === "es" ? "" : "?lang=" + lang) + window.location.hash;
+          try { history.replaceState(null, "", url); } catch (e) { /* file:// u otros */ }
+        }
       });
     });
   });

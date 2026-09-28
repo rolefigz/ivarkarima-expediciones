@@ -40,6 +40,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add("js");</script>
 
 <script type="application/ld+json">
 {
@@ -72,7 +73,7 @@
 </head>
 <body>
 
-<a href="#main" class="skip-link">Saltar al contenido</a>
+<a href="#main" class="skip-link" data-i18n="a11y.skip">Saltar al contenido</a>
 
 <div class="flag-stripe" aria-hidden="true"><em class="y"></em><em class="b"></em><em class="r"></em></div>
 
@@ -81,12 +82,12 @@
 ============================================================ -->
 <header class="site-header" id="site-header">
   <div class="container nav-inner">
-    <a href="#inicio" class="brand">
+    <a href="#inicio" class="brand" aria-label="Ivarkarima Expediciones — inicio" data-i18n-attr="aria-label:a11y.home">
       <img src="assets/img/opt/logo-light.png" width="241" height="96" alt="Ivarkarima Expediciones">
       <span class="brand-name">Ivarkarima</span>
     </a>
 
-    <nav class="nav-menu" aria-label="Navegación principal">
+    <nav class="nav-menu" aria-label="Navegación principal" data-i18n-attr="aria-label:a11y.mainNav">
       <ul class="nav-links">
         <li><a href="#inicio" data-i18n="nav.home">Inicio</a></li>
         <li><a href="#nosotros" data-i18n="nav.about">Nosotros</a></li>
@@ -98,19 +99,19 @@
       </ul>
 
       <div class="nav-side">
-        <div class="lang-switch" role="group" aria-label="Selector de idioma">
-          <button type="button" data-lang="es" class="is-active">ES</button>
-          <button type="button" data-lang="en">EN</button>
+        <div class="lang-switch" role="group" aria-label="Selector de idioma" data-i18n-attr="aria-label:a11y.langSwitch">
+          <button type="button" data-lang="es" lang="es" class="is-active" aria-pressed="true">ES</button>
+          <button type="button" data-lang="en" lang="en" aria-pressed="false">EN</button>
         </div>
 
-        <a href="#" class="btn btn-whatsapp wa-cta" target="_blank" rel="noopener noreferrer"
+        <a href="https://wa.me/584249542480" class="btn btn-whatsapp wa-cta" target="_blank" rel="noopener noreferrer"
            data-wa-msg-es="Hola Ivarkarima, quiero información sobre sus expediciones."
            data-wa-msg-en="Hello Ivarkarima, I'd like information about your expeditions.">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 01-1.26-4.38c0-4.54 3.7-8.23 8.26-8.23 2.2 0 4.27.86 5.82 2.42a8.17 8.17 0 012.41 5.82c-.01 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.76-1.84-.2-.48-.4-.42-.56-.43l-.48-.01c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.07-.1-.23-.16-.48-.28z"/></svg>
           <span data-i18n="nav.cta">Reservar por WhatsApp</span>
         </a>
 
-        <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+        <button type="button" class="nav-toggle" id="navToggle" aria-label="Menú" data-i18n-attr="aria-label:a11y.menu" aria-expanded="false" aria-controls="mobileMenu">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -118,8 +119,8 @@
   </div>
 </header>
 
-<div class="mobile-backdrop" id="mobileBackdrop"></div>
-<nav class="mobile-menu" id="mobileMenu" aria-label="Navegación móvil">
+<div class="mobile-backdrop" id="mobileBackdrop" aria-hidden="true"></div>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Navegación móvil" data-i18n-attr="aria-label:a11y.mobileNav">
   <a href="#inicio" data-i18n="nav.home">Inicio</a>
   <a href="#nosotros" data-i18n="nav.about">Nosotros</a>
   <a href="#expediciones" data-i18n="nav.tours">Expediciones</a>
@@ -137,12 +138,12 @@
   <section class="hero" id="inicio">
     <div class="hero-bg"><picture><source type="image/avif" srcset="assets/img/opt/roraima-640.avif 640w, assets/img/opt/roraima-1280.avif 1280w, assets/img/opt/roraima-1920.avif 1920w" sizes="100vw"><source type="image/webp" srcset="assets/img/opt/roraima-640.webp 640w, assets/img/opt/roraima-1280.webp 1280w, assets/img/opt/roraima-1920.webp 1920w" sizes="100vw"><img src="assets/img/opt/roraima-1280.jpg" srcset="assets/img/opt/roraima-640.jpg 640w, assets/img/opt/roraima-1280.jpg 1280w, assets/img/opt/roraima-1920.jpg 1920w" sizes="100vw" width="1920" height="1440" alt="Vista del tepuy Roraima al amanecer en la Gran Sabana" data-i18n-attr="alt:hero.img.alt" fetchpriority="high" decoding="async"></picture></div>
     <div class="container hero-content">
-      <p class="hero-badge"><span class="star">★</span> <span data-i18n="hero.badge">Guías nativos Pemón · Desde 1996</span></p>
+      <p class="hero-badge"><span class="star" aria-hidden="true">★</span> <span data-i18n="hero.badge">Guías nativos Pemón · Desde 1996</span></p>
       <h1 class="hero-title" data-i18n-html="hero.title">Expediciones al corazón de <em>la Gran Sabana</em></h1>
       <p class="hero-subtitle" data-i18n="hero.subtitle">Casi 30 años guiando viajeros por el Roraima, Canaima y los tepuyes de Venezuela. No somos turistas — somos de aquí.</p>
       <div class="hero-ctas">
         <a href="#expediciones" class="btn btn-primary" data-i18n="hero.cta1">Ver expediciones</a>
-        <a href="#" class="btn btn-outline wa-cta" target="_blank" rel="noopener noreferrer"
+        <a href="https://wa.me/584249542480" class="btn btn-outline wa-cta" target="_blank" rel="noopener noreferrer"
            data-wa-msg-es="Hola Ivarkarima, quiero información sobre sus expediciones."
            data-wa-msg-en="Hello Ivarkarima, I'd like information about your expeditions.">
           <span data-i18n="hero.cta2">Escríbenos por WhatsApp</span>
@@ -158,7 +159,7 @@
   <section class="stats section-dark">
     <div class="container stats-grid">
       <div class="reveal">
-        <div class="stat-value">+30</div>
+        <div class="stat-value">~30</div>
         <div class="stat-label" data-i18n="stats.years">Años de experiencia</div>
       </div>
       <div class="reveal">
@@ -196,7 +197,7 @@
         <p data-i18n="about.p2">No improvisamos rutas ni tercerizamos la experiencia: nuestro equipo de guías, choferes y baquianos lleva años trabajando junto a las comunidades Pemón, con un profundo respeto por su cultura y por la naturaleza que nos recibe en cada expedición.</p>
 
         <blockquote class="about-quote" data-i18n="about.quote">
-          "No somos turistas — somos de aquí. Cada sendero, cada cascada, cada amanecer sobre los tepuyes los conocemos como nuestra propia casa."
+          “No somos turistas — somos de aquí. Cada sendero, cada cascada, cada amanecer sobre los tepuyes los conocemos como nuestra propia casa.”
         </blockquote>
 
         <div class="about-badges">
@@ -232,12 +233,12 @@
             <h3 class="tour-name" data-i18n="tour1.name">Gran Sabana Clásica</h3>
             <p class="tour-desc" data-i18n="tour1.desc">Saltos de agua, la Quebrada de Jaspe, comunidades Pemón y los tepuyes más emblemáticos, recorridos en 4x4.</p>
             <ul class="tour-includes">
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour1.inc1">Transporte 4x4</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour1.inc2">Alojamiento y alimentación</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour1.inc3">Guía nativo bilingüe</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour1.inc4">Entrada al Parque Nacional Canaima</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour1.inc1">Transporte 4x4</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour1.inc2">Alojamiento y alimentación</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour1.inc3">Guía nativo bilingüe</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour1.inc4">Entrada al Parque Nacional Canaima</span></li>
             </ul>
-            <a href="#" class="btn btn-outline btn-block tour-cta wa-cta"
+            <a href="https://wa.me/584249542480" class="btn btn-outline btn-block tour-cta wa-cta"
                data-wa-msg-es="Hola Ivarkarima, me interesa la expedición Gran Sabana Clásica (5 días / 4 noches). ¿Me dan más información?"
                data-wa-msg-en="Hello Ivarkarima, I'm interested in the Classic Gran Sabana expedition (5 days / 4 nights). Could you send more information?"
                target="_blank" rel="noopener noreferrer">
@@ -252,20 +253,20 @@
             <span class="tour-number">02</span>
             <span class="tour-duration" data-i18n="tour2.duration">6 días / 5 noches</span>
             <div class="photo-placeholder">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22z"/></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22z"/></svg>
               <span data-i18n="gallery.placeholder">Agrega foto aquí</span>
             </div>
           </div>
           <div class="tour-body">
             <h3 class="tour-name" data-i18n="tour2.name">Ascenso al Roraima</h3>
-            <p class="tour-desc" data-i18n="tour2.desc">La expedición de trekking más icónica de Venezuela: el ascenso al "mundo perdido" sobre la Gran Sabana.</p>
+            <p class="tour-desc" data-i18n="tour2.desc">La expedición de trekking más icónica de Venezuela: el ascenso al “mundo perdido” sobre la Gran Sabana.</p>
             <ul class="tour-includes">
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour2.inc1">Guía especializado en alta montaña</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour2.inc2">Porteadores</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour2.inc3">Campamentos y alimentación</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour2.inc4">Permisos de ingreso al Parque Nacional</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour2.inc1">Guía especializado en alta montaña</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour2.inc2">Porteadores</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour2.inc3">Campamentos y alimentación</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour2.inc4">Permisos de ingreso al Parque Nacional</span></li>
             </ul>
-            <a href="#" class="btn btn-primary btn-block tour-cta wa-cta"
+            <a href="https://wa.me/584249542480" class="btn btn-primary btn-block tour-cta wa-cta"
                data-wa-msg-es="Hola Ivarkarima, me interesa el Ascenso al Roraima (6 días / 5 noches). ¿Me dan más información?"
                data-wa-msg-en="Hello Ivarkarima, I'm interested in the Roraima Ascent (6 days / 5 nights). Could you send more information?"
                target="_blank" rel="noopener noreferrer">
@@ -280,7 +281,7 @@
             <span class="tour-number">03</span>
             <span class="tour-duration" data-i18n="tour3.duration">3 días / 2 noches</span>
             <div class="photo-placeholder">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22z"/></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22z"/></svg>
               <span data-i18n="gallery.placeholder">Agrega foto aquí</span>
             </div>
           </div>
@@ -288,15 +289,15 @@
             <h3 class="tour-name" data-i18n="tour3.name">Salto Ángel (Canaima)</h3>
             <p class="tour-desc" data-i18n="tour3.desc">Navegación en curiara hasta la caída de agua más alta del mundo, con paso por la laguna de Canaima y sus saltos.</p>
             <ul class="tour-includes">
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.inc1">Vuelo o transporte hasta Canaima</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.inc2">Navegación en curiara</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.inc3">Campamento y alimentación</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.inc4">Guía local bilingüe</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.inc1">Vuelo o transporte hasta Canaima</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.inc2">Navegación en curiara</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.inc3">Campamento y alimentación</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.inc4">Guía local bilingüe</span></li>
             </ul>
             <button type="button" class="tour-more-link" data-tour-modal="modal-tour3">
               <span data-i18n="tour.more">Ver itinerario completo →</span>
             </button>
-            <a href="#" class="btn btn-outline btn-block tour-cta wa-cta"
+            <a href="https://wa.me/584249542480" class="btn btn-outline btn-block tour-cta wa-cta"
                data-wa-msg-es="Hola Ivarkarima, me interesa el tour Salto Ángel / Canaima (3 días / 2 noches). ¿Me dan más información?"
                data-wa-msg-en="Hello Ivarkarima, I'm interested in the Angel Falls / Canaima tour (3 days / 2 nights). Could you send more information?"
                target="_blank" rel="noopener noreferrer">
@@ -311,7 +312,7 @@
             <span class="tour-number">04</span>
             <span class="tour-duration" data-i18n="tour4.duration">2 días / 1 noche</span>
             <div class="photo-placeholder">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22z"/></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22z"/></svg>
               <span data-i18n="gallery.placeholder">Agrega foto aquí</span>
             </div>
           </div>
@@ -319,12 +320,12 @@
             <h3 class="tour-name" data-i18n="tour4.name">Kavac</h3>
             <p class="tour-desc" data-i18n="tour4.desc">Descenso al cañón de aguas rojas de Kavac y su cueva escondida, en territorio de la comunidad Pemón que administra la zona.</p>
             <ul class="tour-includes">
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour4.inc1">Transporte 4x4</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour4.inc2">Guía de la comunidad Pemón</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour4.inc3">Entrada al cañón y la cueva</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour4.inc4">Alimentación</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour4.inc1">Transporte 4x4</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour4.inc2">Guía de la comunidad Pemón</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour4.inc3">Entrada al cañón y la cueva</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour4.inc4">Alimentación</span></li>
             </ul>
-            <a href="#" class="btn btn-outline btn-block tour-cta wa-cta"
+            <a href="https://wa.me/584249542480" class="btn btn-outline btn-block tour-cta wa-cta"
                data-wa-msg-es="Hola Ivarkarima, me interesa la excursión a Kavac. ¿Me dan más información?"
                data-wa-msg-en="Hello Ivarkarima, I'm interested in the Kavac excursion. Could you send more information?"
                target="_blank" rel="noopener noreferrer">
@@ -339,7 +340,7 @@
             <span class="tour-number">05</span>
             <span class="tour-duration" data-i18n="tour6.duration">Día completo</span>
             <div class="photo-placeholder">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22z"/></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22z"/></svg>
               <span data-i18n="gallery.placeholder">Agrega foto aquí</span>
             </div>
           </div>
@@ -347,15 +348,15 @@
             <h3 class="tour-name" data-i18n="tour6.name">Piedra del Elefante</h3>
             <p class="tour-desc" data-i18n="tour6.desc">Ascenso a la icónica formación rocosa del Escudo Guayanés, combinado con un descanso activo en el campamento recreacional adyacente.</p>
             <ul class="tour-includes">
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour6.inc1">Ascenso guiado al monolito</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour6.inc2">Uso de piscina y áreas del campamento</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour6.inc3">Almuerzo en churuatas (parrilla o sancocho)</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour6.inc4">Avistamiento de fauna y flora en el sendero</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour6.inc1">Ascenso guiado al monolito</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour6.inc2">Uso de piscina y áreas del campamento</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour6.inc3">Almuerzo en churuatas (parrilla o sancocho)</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour6.inc4">Avistamiento de fauna y flora en el sendero</span></li>
             </ul>
             <button type="button" class="tour-more-link" data-tour-modal="modal-tour6">
               <span data-i18n="tour.more">Ver itinerario completo →</span>
             </button>
-            <a href="#" class="btn btn-outline btn-block tour-cta wa-cta"
+            <a href="https://wa.me/584249542480" class="btn btn-outline btn-block tour-cta wa-cta"
                data-wa-msg-es="Hola Ivarkarima, me interesa la excursión a la Piedra del Elefante (día completo). ¿Me dan más información?"
                data-wa-msg-en="Hello Ivarkarima, I'm interested in the Elephant Rock excursion (full day). Could you send more information?"
                target="_blank" rel="noopener noreferrer">
@@ -370,7 +371,7 @@
             <span class="tour-number">06</span>
             <span class="tour-duration" data-i18n="tour7.duration">6 horas</span>
             <div class="photo-placeholder">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22z"/></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22z"/></svg>
               <span data-i18n="gallery.placeholder">Agrega foto aquí</span>
             </div>
           </div>
@@ -378,15 +379,15 @@
             <h3 class="tour-name" data-i18n="tour7.name">City Tour Histórico (Ciudad Bolívar)</h3>
             <p class="tour-desc" data-i18n="tour7.desc">Recorrido guiado por el Casco Histórico de Ciudad Bolívar saliendo desde Puerto Ordaz, cruzando el Puente Angostura sobre el río Orinoco.</p>
             <ul class="tour-includes">
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour7.inc1">Transporte Puerto Ordaz ↔ Ciudad Bolívar</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour7.inc2">Caminata guiada por el Casco Histórico</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour7.inc3">Plaza Bolívar, Casa del Congreso de Angostura y Catedral</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour7.inc4">Parada de gastronomía típica local</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour7.inc1">Transporte Puerto Ordaz ↔ Ciudad Bolívar</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour7.inc2">Caminata guiada por el Casco Histórico</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour7.inc3">Plaza Bolívar, Casa del Congreso de Angostura y Catedral</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour7.inc4">Parada de gastronomía típica local</span></li>
             </ul>
             <button type="button" class="tour-more-link" data-tour-modal="modal-tour7">
               <span data-i18n="tour.more">Ver itinerario completo →</span>
             </button>
-            <a href="#" class="btn btn-outline btn-block tour-cta wa-cta"
+            <a href="https://wa.me/584249542480" class="btn btn-outline btn-block tour-cta wa-cta"
                data-wa-msg-es="Hola Ivarkarima, me interesa el City Tour Histórico de Ciudad Bolívar (6 horas). ¿Me dan más información?"
                data-wa-msg-en="Hello Ivarkarima, I'm interested in the Historic City Tour of Ciudad Bolívar (6 hours). Could you send more information?"
                target="_blank" rel="noopener noreferrer">
@@ -401,7 +402,7 @@
             <span class="tour-number">07</span>
             <span class="tour-duration" data-i18n="tour8.duration">2 horas</span>
             <div class="photo-placeholder">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22z"/></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22z"/></svg>
               <span data-i18n="gallery.placeholder">Agrega foto aquí</span>
             </div>
           </div>
@@ -409,15 +410,15 @@
             <h3 class="tour-name" data-i18n="tour8.name">Paseo en Bote por el Caroní y el Orinoco</h3>
             <p class="tour-desc" data-i18n="tour8.desc">Paseo en bote desde el Club Náutico de Puerto Ordaz hasta la confluencia de los ríos Caroní y Orinoco, con los saltos de Cachamay y La Llovizna.</p>
             <ul class="tour-includes">
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour8.inc1">Salida desde el Club Náutico de Puerto Ordaz</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour8.inc2">Encuentro de las aguas: Caroní y Orinoco</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour8.inc3">Saltos de Cachamay</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour8.inc4">Salto La Llovizna</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour8.inc1">Salida desde el Club Náutico de Puerto Ordaz</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour8.inc2">Encuentro de las aguas: Caroní y Orinoco</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour8.inc3">Saltos de Cachamay</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour8.inc4">Salto La Llovizna</span></li>
             </ul>
             <button type="button" class="tour-more-link" data-tour-modal="modal-tour8">
               <span data-i18n="tour.more">Ver itinerario completo →</span>
             </button>
-            <a href="#" class="btn btn-outline btn-block tour-cta wa-cta"
+            <a href="https://wa.me/584249542480" class="btn btn-outline btn-block tour-cta wa-cta"
                data-wa-msg-es="Hola Ivarkarima, me interesa el paseo en bote Caroní-Orinoco (Cachamay y La Llovizna). ¿Me dan más información?"
                data-wa-msg-en="Hello Ivarkarima, I'm interested in the Caroní-Orinoco boat ride (Cachamay and La Llovizna). Could you send more information?"
                target="_blank" rel="noopener noreferrer">
@@ -432,7 +433,7 @@
             <span class="tour-number">08</span>
             <span class="tour-duration" data-i18n="tour5.duration">Flexible</span>
             <div class="photo-placeholder">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22z"/></svg>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22z"/></svg>
               <span data-i18n="gallery.placeholder">Agrega foto aquí</span>
             </div>
           </div>
@@ -440,11 +441,11 @@
             <h3 class="tour-name" data-i18n="tour5.name">Tour a medida / Expedición privada</h3>
             <p class="tour-desc" data-i18n="tour5.desc">Itinerario personalizado para grupos, fotógrafos o exigencias especiales. Diseñamos la ruta contigo.</p>
             <ul class="tour-includes">
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour5.inc1">Itinerario 100% personalizado</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour5.inc2">Grupos pequeños o privados</span></li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour5.inc3">Ideal para fotógrafos</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour5.inc1">Itinerario 100% personalizado</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour5.inc2">Grupos pequeños o privados</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour5.inc3">Ideal para fotógrafos</span></li>
             </ul>
-            <a href="#" class="btn btn-outline btn-block tour-cta wa-cta"
+            <a href="https://wa.me/584249542480" class="btn btn-outline btn-block tour-cta wa-cta"
                data-wa-msg-es="Hola Ivarkarima, quisiera armar una expedición a medida. ¿Me ayudan a diseñar el itinerario?"
                data-wa-msg-en="Hello Ivarkarima, I'd like to design a custom expedition. Can you help me plan the itinerary?"
                target="_blank" rel="noopener noreferrer">
@@ -460,7 +461,7 @@
           <h3 data-i18n="tours.custom.title">¿No ves lo que buscas?</h3>
           <p data-i18n="tours.custom.text">Diseñamos expediciones a medida para tu grupo, tus fechas y tu ritmo.</p>
         </div>
-        <a href="#" class="btn btn-primary wa-cta"
+        <a href="https://wa.me/584249542480" class="btn btn-primary wa-cta"
            data-wa-msg-es="Hola Ivarkarima, quisiera armar una expedición a medida."
            data-wa-msg-en="Hello Ivarkarima, I'd like to design a custom expedition."
            target="_blank" rel="noopener noreferrer">
@@ -469,236 +470,6 @@
       </div>
     </div>
   </section>
-
-  <!-- ============================================================
-       MODALES DE ITINERARIO COMPLETO ("Ver más" de cada tour)
-  ============================================================ -->
-
-  <!-- Modal: itinerario completo — Salto Ángel -->
-  <div class="tour-modal" id="modal-tour3" role="dialog" aria-modal="true" aria-labelledby="modal-tour3-title">
-    <div class="tour-modal-panel">
-      <button type="button" class="tour-modal-close" aria-label="Cerrar">&times;</button>
-      <span class="tour-modal-duration" data-i18n="tour3.duration">3 días / 2 noches</span>
-      <h3 class="tour-modal-title" id="modal-tour3-title" data-i18n="tour3.m.title">Salto Ángel (Canaima) — itinerario completo</h3>
-      <p class="tour-modal-intro" data-i18n="tour3.m.intro">Tres días y dos noches para llegar hasta el Kerepakupai Vená, la caída de agua más alta del mundo, navegando en curiara por los ríos Carrao y Churún.</p>
-
-      <div class="tour-modal-day">
-        <h4 data-i18n="tour3.m.d1.title">Día 1 — Llegada y exploración de la Laguna de Canaima</h4>
-        <div class="itinerary-schedule">
-          <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.morning">Mañana</span><div class="itinerary-info"><p data-i18n="tour3.m.d1.r1">Arribo en avión al aeródromo de Canaima (vuelo desde Caracas, Puerto Ordaz o Ciudad Bolívar). Recibimiento por los guías locales de la etnia Pemón y traslado a la posada para dejar el equipaje.</p></div></div>
-          <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.lunch">Almuerzo</span><div class="itinerary-info"><p data-i18n="tour3.m.d1.r2">Comida típica en el campamento.</p></div></div>
-          <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.afternoon">Tarde</span><div class="itinerary-info"><p data-i18n="tour3.m.d1.r3">Excursión en curiara (embarcación indígena motorizada) navegando la Laguna de Canaima. Desembarco en Salto El Sapo y Salto El Hacha, con caminata por el sendero detrás de la cortina de agua.</p></div></div>
-          <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.night">Noche</span><div class="itinerary-info"><p data-i18n="tour3.m.d1.r4">Cena y pernocta en posada/campamento, con cama y ventilador.</p></div></div>
-        </div>
-      </div>
-
-      <div class="tour-modal-day">
-        <h4 data-i18n="tour3.m.d2.title">Día 2 — Expedición al Salto Ángel (Kerepakupai Vená)</h4>
-        <div class="itinerary-schedule">
-          <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.dawn">Madrugada</span><div class="itinerary-info"><p data-i18n="tour3.m.d2.r1">Desayuno temprano e inicio del traslado fluvial río arriba por el Río Carrao y luego por el Río Churún hacia el Auyantepuy, bordeando la Sabana de Mayupa y la Isla Orquídea (navegación de 4 a 5 horas aprox.).</p></div></div>
-          <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.midday">Mediodía</span><div class="itinerary-info"><p data-i18n="tour3.m.d2.r2">Llegada a Isla Ratón (frente al Auyantepuy) e inicio de un trekking de 1 a 1.5 horas por la selva hasta el Mirador Laime.</p></div></div>
-          <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.afternoon">Tarde</span><div class="itinerary-info"><p data-i18n="tour3.m.d2.r3">Vista al Salto Ángel en todo su esplendor, con posibilidad de nadar en la poza natural de la base (según clima y caudal del río). Retorno a la base.</p></div></div>
-          <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.night">Noche</span><div class="itinerary-info"><p data-i18n="tour3.m.d2.r4">Cena en el campamento rústico frente al Salto Ángel y pernocta tradicional en hamacas con mosquitero.</p></div></div>
-        </div>
-      </div>
-
-      <div class="tour-modal-day">
-        <h4 data-i18n="tour3.m.d3.title">Día 3 — Retorno a Canaima y vuelo de salida</h4>
-        <div class="itinerary-schedule">
-          <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.morning">Mañana</span><div class="itinerary-info"><p data-i18n="tour3.m.d3.r1">Desayuno al amanecer sobre el Auyantepuy y embarque en las curiaras para navegar río abajo de regreso al pueblo de Canaima.</p></div></div>
-          <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.midday">Mediodía</span><div class="itinerary-info"><p data-i18n="tour3.m.d3.r2">Tiempo libre para comprar artesanía Pemón, visitar la playa de la laguna o tomar un baño final.</p></div></div>
-          <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.afternoon">Tarde</span><div class="itinerary-info"><p data-i18n="tour3.m.d3.r3">Traslado al aeródromo de Canaima para el vuelo de retorno.</p></div></div>
-        </div>
-      </div>
-
-      <div class="tour-modal-section">
-        <h4 data-i18n="tour3.m.inc.title">Qué suele incluir el paquete</h4>
-        <ul class="tour-includes">
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.m.inc.i1">Boletos aéreos e impuestos de parque</span></li>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.m.inc.i2">Comidas completas y bebidas no alcohólicas</span></li>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.m.inc.i3">Guiatura en español/inglés y traslados fluviales</span></li>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.m.inc.i4">Hospedaje: 1 noche en cama (posada) y 1 noche en hamaca (campamento en la selva)</span></li>
-        </ul>
-      </div>
-
-      <div class="tour-modal-section">
-        <h4 data-i18n="tour3.m.gear.title">Indumentaria y equipo recomendado</h4>
-        <ul class="tour-includes">
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.m.gear.i1">Ropa de secado rápido (manga larga para sol y mosquitos)</span></li>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.m.gear.i2">Impermeable o poncho (esencial tras las cascadas y en los trayectos en bote)</span></li>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.m.gear.i3">Calzado cómodo con buen agarre y sandalias acuáticas</span></li>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.m.gear.i4">Bolsa estanca/seca para proteger cámaras y celulares</span></li>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.m.gear.i5">Repelente de insectos y protector solar</span></li>
-        </ul>
-      </div>
-
-      <a href="#" class="btn btn-primary btn-block tour-cta wa-cta"
-         data-wa-msg-es="Hola Ivarkarima, me interesa el tour Salto Ángel / Canaima (3 días / 2 noches). ¿Me dan más información?"
-         data-wa-msg-en="Hello Ivarkarima, I'm interested in the Angel Falls / Canaima tour (3 days / 2 nights). Could you send more information?"
-         target="_blank" rel="noopener noreferrer">
-        <span data-i18n="tour.cta">Consultar precio →</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- Modal: itinerario completo — Piedra del Elefante -->
-  <div class="tour-modal" id="modal-tour6" role="dialog" aria-modal="true" aria-labelledby="modal-tour6-title">
-    <div class="tour-modal-panel">
-      <button type="button" class="tour-modal-close" aria-label="Cerrar">&times;</button>
-      <span class="tour-modal-duration" data-i18n="tour6.duration">Día completo</span>
-      <h3 class="tour-modal-title" id="modal-tour6-title" data-i18n="tour6.m.title">Piedra del Elefante — itinerario completo</h3>
-      <p class="tour-modal-intro" data-i18n="tour6.m.intro">Este plan combina el ascenso a la icónica formación rocosa del Escudo Guayanés con un descanso activo en las instalaciones del campamento recreacional adyacente.</p>
-
-      <div class="tour-modal-section">
-        <div class="itinerary-schedule">
-          <div class="itinerary-row">
-            <span class="itinerary-time">07:00 AM – 07:30 AM</span>
-            <div class="itinerary-info">
-              <h5 data-i18n="tour6.m.r1.act">Llegada y registro</h5>
-              <p data-i18n="tour6.m.r1.det">Encuentro en el Campamento Recreacional Piedra del Elefante. Charla de seguridad e hidratación inicial.</p>
-            </div>
-          </div>
-          <div class="itinerary-row">
-            <span class="itinerary-time">07:30 AM – 09:30 AM</span>
-            <div class="itinerary-info">
-              <h5 data-i18n="tour6.m.r2.act">Ascenso al monolito</h5>
-              <p data-i18n="tour6.m.r2.det">Caminata hacia la cima de la Piedra del Elefante. Es clave subir temprano para evitar la radiación solar intensa sobre el granito.</p>
-            </div>
-          </div>
-          <div class="itinerary-row">
-            <span class="itinerary-time">09:30 AM – 10:30 AM</span>
-            <div class="itinerary-info">
-              <h5 data-i18n="tour6.m.r3.act">Cumbre y fotografía</h5>
-              <p data-i18n="tour6.m.r3.det">Tiempo libre en la cima para contemplar la vista panorámica del río Caroní, la vegetación de sabana y tomar fotografías.</p>
-            </div>
-          </div>
-          <div class="itinerary-row">
-            <span class="itinerary-time">10:30 AM – 11:30 AM</span>
-            <div class="itinerary-info">
-              <h5 data-i18n="tour6.m.r4.act">Descenso al campamento</h5>
-              <p data-i18n="tour6.m.r4.det">Retorno guiado hacia la base, aprovechando el sendero para avistamiento de fauna y flora típica.</p>
-            </div>
-          </div>
-          <div class="itinerary-row">
-            <span class="itinerary-time">11:30 AM – 01:00 PM</span>
-            <div class="itinerary-info">
-              <h5 data-i18n="tour6.m.r5.act">Almuerzo y descanso</h5>
-              <p data-i18n="tour6.m.r5.det">Uso de churuatas en el campamento para almorzar (comida rápida, parrilla o sancocho) y reposar a la sombra.</p>
-            </div>
-          </div>
-          <div class="itinerary-row">
-            <span class="itinerary-time">01:00 PM – 02:30 PM</span>
-            <div class="itinerary-info">
-              <h5 data-i18n="tour6.m.r6.act">Actividades recreativas</h5>
-              <p data-i18n="tour6.m.r6.det">Uso de la piscina del campamento, áreas verdes, canchas de juegos o paseos en kayak (según disponibilidad del centro).</p>
-            </div>
-          </div>
-          <div class="itinerary-row">
-            <span class="itinerary-time">02:30 PM – 03:00 PM</span>
-            <div class="itinerary-info">
-              <h5 data-i18n="tour6.m.r7.act">Cierre y retorno</h5>
-              <p data-i18n="tour6.m.r7.det">Recogida de pertenencias, hidratación final y salida de las instalaciones.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <a href="#" class="btn btn-primary btn-block tour-cta wa-cta"
-         data-wa-msg-es="Hola Ivarkarima, me interesa la excursión a la Piedra del Elefante (día completo). ¿Me dan más información?"
-         data-wa-msg-en="Hello Ivarkarima, I'm interested in the Elephant Rock excursion (full day). Could you send more information?"
-         target="_blank" rel="noopener noreferrer">
-        <span data-i18n="tour.cta">Consultar precio →</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- Modal: itinerario completo — City Tour Ciudad Bolívar -->
-  <div class="tour-modal" id="modal-tour7" role="dialog" aria-modal="true" aria-labelledby="modal-tour7-title">
-    <div class="tour-modal-panel">
-      <button type="button" class="tour-modal-close" aria-label="Cerrar">&times;</button>
-      <span class="tour-modal-duration" data-i18n="tour7.duration">6 horas</span>
-      <h3 class="tour-modal-title" id="modal-tour7-title" data-i18n="tour7.m.title">City Tour Histórico (Ciudad Bolívar) — itinerario completo</h3>
-      <p class="tour-modal-intro" data-i18n="tour7.m.intro">El City Tour Histórico en Ciudad Bolívar, saliendo desde Puerto Ordaz, abarca en 6 horas los aspectos más representativos de la capital histórica de Venezuela.</p>
-
-      <div class="tour-modal-section">
-        <ul class="tour-modal-list">
-          <li data-i18n-html="tour7.m.l1"><strong>Traslado y cruce sobre el río Orinoco</strong> (~1 h 15 min de ida): salida desde Puerto Ordaz rumbo a Ciudad Bolívar cruzando el icónico Puente Angostura.</li>
-          <li>
-            <span data-i18n-html="tour7.m.l2"><strong>Recorrido a pie por el Casco Histórico:</strong> visita guiada alrededor de la Plaza Bolívar:</span>
-            <ul class="tour-modal-sublist">
-              <li data-i18n-html="tour7.m.l2.s1"><strong>Casa del Congreso de Angostura:</strong> lugar donde Simón Bolívar pronunció su célebre discurso en 1819.</li>
-              <li data-i18n-html="tour7.m.l2.s2"><strong>Catedral Metropolitana de Ciudad Bolívar:</strong> templo de arquitectura colonial frente a la plaza principal.</li>
-              <li data-i18n-html="tour7.m.l2.s3"><strong>Casa de la XII Angustia / Casa San Isidro:</strong> quinta donde el Libertador residió y preparó documentos históricos.</li>
-              <li data-i18n-html="tour7.m.l2.s4"><strong>Muro de Fusilamiento de Manuel Piar:</strong> detalle histórico junto al costado de la catedral.</li>
-            </ul>
-          </li>
-          <li data-i18n-html="tour7.m.l3"><strong>Paseo del Orinoco y Piedra del Medio:</strong> caminata con vista panorámica hacia el majestuoso río Orinoco.</li>
-          <li data-i18n-html="tour7.m.l4"><strong>Tiempo para gastronomía local:</strong> breve parada para degustar platos o dulces típicos de la región (como el queso de mano o la sapoara, según la época).</li>
-          <li data-i18n-html="tour7.m.l5"><strong>Retorno a Puerto Ordaz</strong> (~1 h 15 min de regreso).</li>
-        </ul>
-      </div>
-
-      <div class="tour-modal-section">
-        <h4 data-i18n="tour7.m.det.title">Detalles clave</h4>
-        <ul class="tour-includes">
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour7.m.det.i1">Duración: 6 horas en total (incluyendo trayectos de traslado)</span></li>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour7.m.det.i2">Modalidad: transporte terrestre privado/turístico más caminata guiada a pie en la zona colonial</span></li>
-          <li><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour7.m.det.i3">Recomendaciones: ropa fresca, calzado cómodo para empedrado, protector solar e hidratación</span></li>
-        </ul>
-      </div>
-
-      <a href="#" class="btn btn-primary btn-block tour-cta wa-cta"
-         data-wa-msg-es="Hola Ivarkarima, me interesa el City Tour Histórico de Ciudad Bolívar (6 horas). ¿Me dan más información?"
-         data-wa-msg-en="Hello Ivarkarima, I'm interested in the Historic City Tour of Ciudad Bolívar (6 hours). Could you send more information?"
-         target="_blank" rel="noopener noreferrer">
-        <span data-i18n="tour.cta">Consultar precio →</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- Modal: itinerario completo — Paseo en Bote Caroní-Orinoco -->
-  <div class="tour-modal" id="modal-tour8" role="dialog" aria-modal="true" aria-labelledby="modal-tour8-title">
-    <div class="tour-modal-panel">
-      <button type="button" class="tour-modal-close" aria-label="Cerrar">&times;</button>
-      <span class="tour-modal-duration" data-i18n="tour8.duration">2 horas</span>
-      <h3 class="tour-modal-title" id="modal-tour8-title" data-i18n="tour8.m.title">Paseo en Bote — Caroní y Orinoco — itinerario completo</h3>
-      <p class="tour-modal-intro" data-i18n="tour8.m.intro">Un paseo de dos horas en bote desde el Club Náutico de Puerto Ordaz ofrece un recorrido intenso y visualmente impactante por la confluencia de dos de los ríos más importantes de Venezuela y sus saltos de agua asociados.</p>
-
-      <div class="tour-modal-section">
-        <ul class="tour-modal-list">
-          <li data-i18n-html="tour8.m.l1"><strong>Salida: Club Náutico de Puerto Ordaz.</strong> El recorrido comienza navegando las aguas oscuras y tranquilas del río Caroní, con vegetación ribereña densa e infraestructura industrial a lo lejos, típica de la zona de Guayana.</li>
-          <li>
-            <span data-i18n-html="tour8.m.l2"><strong>El encuentro de las aguas (confluencia Caroní–Orinoco).</strong> El fenómeno central del paseo: a pocos minutos de navegación, la lancha se aproxima al punto donde el río Caroní desemboca en el inmenso río Orinoco.</span>
-            <ul class="tour-modal-sublist">
-              <li data-i18n-html="tour8.m.l2.s1"><strong>El contraste:</strong> una línea divisoria natural muy definida — de un lado, las aguas oscuras y casi negras del Caroní, ricas en ácidos húmicos; del otro, las aguas turbias y amarillentas del Orinoco, cargadas de sedimentos.</li>
-              <li data-i18n-html="tour8.m.l2.s2"><strong>La dinámica:</strong> las diferentes densidades y temperaturas de ambos ríos hacen que tarden varios kilómetros en mezclarse por completo — el bote suele navegar sobre esa línea.</li>
-            </ul>
-          </li>
-          <li>
-            <span data-i18n-html="tour8.m.l3"><strong>Navegación hacia el Parque Cachamay.</strong> Dejando atrás el encuentro, la embarcación remonta el río en dirección al Parque Cachamay.</span>
-            <ul class="tour-modal-sublist">
-              <li data-i18n-html="tour8.m.l3.s1"><strong>Los Saltos de Cachamay:</strong> el bote se acerca a los rápidos y cascadas, con la fuerza del río estrellándose contra las rocas entre abundante vegetación. Se siente el rocío y se escucha el estruendo del agua.</li>
-            </ul>
-          </li>
-          <li>
-            <span data-i18n-html="tour8.m.l4"><strong>Visita al Parque La Llovizna.</strong> La lancha se dirige hacia el sistema de caídas de agua de La Llovizna, otra sección vital del río Caroní inferior.</span>
-            <ul class="tour-modal-sublist">
-              <li data-i18n-html="tour8.m.l4.s1"><strong>El Salto La Llovizna:</strong> el salto más famoso del parque — el bote se aproxima a la base de la cascada principal.</li>
-              <li data-i18n-html="tour8.m.l4.s2"><strong>La experiencia:</strong> la caída de agua genera una fina llovizna constante que cubre el área, entre bosque de galería exuberante y múltiples brazos de agua sobre las rocas oscuras del Escudo Guayanés.</li>
-            </ul>
-          </li>
-          <li data-i18n-html="tour8.m.l5"><strong>Retorno.</strong> El viaje concluye con la navegación de regreso al Club Náutico de Puerto Ordaz, completando el circuito de aproximadamente dos horas.</li>
-        </ul>
-      </div>
-
-      <a href="#" class="btn btn-primary btn-block tour-cta wa-cta"
-         data-wa-msg-es="Hola Ivarkarima, me interesa el paseo en bote Caroní-Orinoco (Cachamay y La Llovizna). ¿Me dan más información?"
-         data-wa-msg-en="Hello Ivarkarima, I'm interested in the Caroní-Orinoco boat ride (Cachamay and La Llovizna). Could you send more information?"
-         target="_blank" rel="noopener noreferrer">
-        <span data-i18n="tour.cta">Consultar precio →</span>
-      </a>
-    </div>
-  </div>
 
   <!-- ============================================================
        DESTINOS
@@ -720,35 +491,35 @@
           </div>
         </div>
         <div class="dest-card reveal">
-          <div class="photo-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
+          <div class="photo-placeholder"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
           <div class="dest-caption">
             <h3 data-i18n="dest.angel.name">Salto Ángel</h3>
             <p data-i18n="dest.angel.text">La caída de agua más alta del mundo, escondida en la selva del Auyantepuy.</p>
           </div>
         </div>
         <div class="dest-card reveal">
-          <div class="photo-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
+          <div class="photo-placeholder"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
           <div class="dest-caption">
             <h3 data-i18n="dest.canaima.name">Canaima</h3>
-            <p data-i18n="dest.canaima.text">Una laguna rosada rodeada de saltos de agua y playas de arena rosa, puerta de entrada al parque nacional.</p>
+            <p data-i18n="dest.canaima.text">Una laguna rodeada de saltos de agua y playas de arena rosa, puerta de entrada al parque nacional.</p>
           </div>
         </div>
         <div class="dest-card reveal">
-          <div class="photo-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
+          <div class="photo-placeholder"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
           <div class="dest-caption">
             <h3 data-i18n="dest.jaspe.name">Quebrada de Jaspe</h3>
             <p data-i18n="dest.jaspe.text">Un lecho de piedra jaspe rojiza bajo aguas cristalinas, único en el planeta.</p>
           </div>
         </div>
         <div class="dest-card reveal">
-          <div class="photo-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
+          <div class="photo-placeholder"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
           <div class="dest-caption">
             <h3 data-i18n="dest.sabana.name">Gran Sabana</h3>
             <p data-i18n="dest.sabana.text">Sabanas infinitas salpicadas de tepuyes, ríos de aguas negras y horizontes que no terminan nunca.</p>
           </div>
         </div>
         <div class="dest-card reveal">
-          <div class="photo-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
+          <div class="photo-placeholder"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
           <div class="dest-caption">
             <h3 data-i18n="dest.kavac.name">Kavac</h3>
             <p data-i18n="dest.kavac.text">Un cañón de aguas rojas tallado en la roca, administrado y guiado por la comunidad Pemón local.</p>
@@ -775,38 +546,30 @@
         </button>
         <!-- Placeholders: reemplaza cada uno por una foto real (misma estructura, cambia data-full/src/alt) -->
         <button type="button" class="gallery-item reveal" disabled>
-          <div class="photo-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
+          <div class="photo-placeholder"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
         </button>
         <button type="button" class="gallery-item reveal" disabled>
-          <div class="photo-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
+          <div class="photo-placeholder"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
         </button>
         <button type="button" class="gallery-item reveal" disabled>
-          <div class="photo-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
+          <div class="photo-placeholder"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
         </button>
         <button type="button" class="gallery-item reveal" disabled>
-          <div class="photo-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
+          <div class="photo-placeholder"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
         </button>
         <button type="button" class="gallery-item reveal" disabled>
-          <div class="photo-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
+          <div class="photo-placeholder"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
         </button>
         <button type="button" class="gallery-item reveal" disabled>
-          <div class="photo-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
+          <div class="photo-placeholder"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
         </button>
         <button type="button" class="gallery-item reveal" disabled>
-          <div class="photo-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
+          <div class="photo-placeholder"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zm1 2v10h14V7H5zm2 8l3.5-4.5 2.5 3 3-4L19 15H7z"/></svg><span data-i18n="gallery.placeholder">Agrega foto aquí</span></div>
         </button>
       </div>
     </div>
   </section>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
-    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Cerrar">&times;</button>
-    <div class="lightbox-content">
-      <img src="" alt="" id="lightboxImg">
-      <p class="lightbox-caption" id="lightboxCaption"></p>
-    </div>
-  </div>
 
   <!-- ============================================================
        POR QUÉ ELEGIRNOS
@@ -820,32 +583,32 @@
 
       <div class="why-grid">
         <div class="why-item reveal">
-          <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.4 8.7-8 10-4.6-1.3-8-5-8-10V6l8-4zm0 2.2L6 7v5c0 3.9 2.5 6.9 6 7.9 3.5-1 6-4 6-7.9V7l-6-2.8z"/></svg></div>
+          <div class="why-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.4 8.7-8 10-4.6-1.3-8-5-8-10V6l8-4zm0 2.2L6 7v5c0 3.9 2.5 6.9 6 7.9 3.5-1 6-4 6-7.9V7l-6-2.8z"/></svg></div>
           <h3 data-i18n="why.item1.title">Seguridad y experiencia comprobada</h3>
           <p data-i18n="why.item1.text">Casi 30 años operando en la zona nos han enseñado a anticipar el clima, el terreno y cada detalle logístico.</p>
         </div>
         <div class="why-item reveal">
-          <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 8 1.34 8 4v2H4v-2c0-2.66 5.3-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z"/></svg></div>
+          <div class="why-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 12c2.7 0 8 1.34 8 4v2H4v-2c0-2.66 5.3-4 8-4zm0-2a4 4 0 110-8 4 4 0 010 8z"/></svg></div>
           <h3 data-i18n="why.item2.title">Guías nativos Pemón</h3>
           <p data-i18n="why.item2.text">Conocen cada sendero desde niños y comparten su cultura de primera mano, en español e inglés.</p>
         </div>
         <div class="why-item reveal">
-          <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg></div>
+          <div class="why-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg></div>
           <h3 data-i18n="why.item3.title">Respeto ambiental y cultural</h3>
           <p data-i18n="why.item3.text">Trabajamos de la mano con las comunidades Pemón y protegemos el entorno que hace posible cada expedición.</p>
         </div>
         <div class="why-item reveal">
-          <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+          <div class="why-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
           <h3 data-i18n="why.item4.title">Grupos pequeños</h3>
           <p data-i18n="why.item4.text">Priorizamos la atención personalizada por encima del volumen de viajeros.</p>
         </div>
         <div class="why-item reveal">
-          <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <div class="why-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
           <h3 data-i18n="why.item5.title">Cobertura de los destinos clave</h3>
           <p data-i18n="why.item5.text">Roraima, Salto Ángel, Canaima, Kavac y toda la Gran Sabana bajo un mismo operador.</p>
         </div>
         <div class="why-item reveal">
-          <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2z"/></svg></div>
+          <div class="why-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2z"/></svg></div>
           <h3 data-i18n="why.item6.title">Atención personalizada</h3>
           <p data-i18n="why.item6.text">Te acompañamos en español o inglés desde la primera consulta hasta el regreso a casa.</p>
         </div>
@@ -865,13 +628,13 @@
       </div>
 
       <div class="testimonials-track-wrap reveal">
-        <div class="testimonials-track" id="testimonialsTrack">
+        <div class="testimonials-track" id="testimonialsTrack" tabindex="0" role="region" aria-label="Testimonios de viajeros" data-i18n-attr="aria-label:a11y.carousel">
           <div class="testimonial-card">
             <span class="testimonial-tag" data-i18n="testi.example">Reseña de ejemplo</span>
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-quote" data-i18n="testi1.quote">"Una experiencia que cambia la forma en que ves la naturaleza. El equipo conoce cada rincón como si fuera su propia casa."</p>
+            <div class="testimonial-stars" role="img" aria-label="5 de 5 estrellas" data-i18n-attr="aria-label:testi.stars">★★★★★</div>
+            <p class="testimonial-quote" data-i18n="testi1.quote">“Una experiencia que cambia la forma en que ves la naturaleza. El equipo conoce cada rincón como si fuera su propia casa.”</p>
             <div class="testimonial-person">
-              <div class="testimonial-avatar">JP</div>
+              <div class="testimonial-avatar" aria-hidden="true">JP</div>
               <div>
                 <div class="testimonial-name" data-i18n="testi1.name">[Nombre del viajero]</div>
                 <div class="testimonial-origin" data-i18n="testi1.origin">[País de origen]</div>
@@ -880,10 +643,10 @@
           </div>
           <div class="testimonial-card">
             <span class="testimonial-tag" data-i18n="testi.example">Reseña de ejemplo</span>
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-quote" data-i18n="testi2.quote">"El ascenso al Roraima con Ivarkarima fue impecable: guías atentos, buena comida y una seguridad que se sintió en cada paso."</p>
+            <div class="testimonial-stars" role="img" aria-label="5 de 5 estrellas" data-i18n-attr="aria-label:testi.stars">★★★★★</div>
+            <p class="testimonial-quote" data-i18n="testi2.quote">“El ascenso al Roraima con Ivarkarima fue impecable: guías atentos, buena comida y una seguridad que se sintió en cada paso.”</p>
             <div class="testimonial-person">
-              <div class="testimonial-avatar">MG</div>
+              <div class="testimonial-avatar" aria-hidden="true">MG</div>
               <div>
                 <div class="testimonial-name" data-i18n="testi2.name">[Nombre del viajero]</div>
                 <div class="testimonial-origin" data-i18n="testi2.origin">[País de origen]</div>
@@ -892,10 +655,10 @@
           </div>
           <div class="testimonial-card">
             <span class="testimonial-tag" data-i18n="testi.example">Reseña de ejemplo</span>
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-quote" data-i18n="testi3.quote">"Como fotógrafo he viajado por medio mundo — pocos lugares me impresionaron como la Gran Sabana con estos guías."</p>
+            <div class="testimonial-stars" role="img" aria-label="5 de 5 estrellas" data-i18n-attr="aria-label:testi.stars">★★★★★</div>
+            <p class="testimonial-quote" data-i18n="testi3.quote">“Como fotógrafo he viajado por medio mundo — pocos lugares me impresionaron como la Gran Sabana con estos guías.”</p>
             <div class="testimonial-person">
-              <div class="testimonial-avatar">RT</div>
+              <div class="testimonial-avatar" aria-hidden="true">RT</div>
               <div>
                 <div class="testimonial-name" data-i18n="testi3.name">[Nombre del viajero]</div>
                 <div class="testimonial-origin" data-i18n="testi3.origin">[País de origen]</div>
@@ -904,8 +667,8 @@
           </div>
         </div>
         <div class="testimonials-nav">
-          <button type="button" class="tnav-btn" id="testiPrev" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg></button>
-          <button type="button" class="tnav-btn" id="testiNext" aria-label="Siguiente"><svg viewBox="0 0 24 24"><path d="M8.6 16.6L10 18l6-6-6-6-1.4 1.4L13.2 12z"/></svg></button>
+          <button type="button" class="tnav-btn" id="testiPrev" aria-controls="testimonialsTrack" aria-label="Testimonio anterior" data-i18n-attr="aria-label:a11y.prev"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg></button>
+          <button type="button" class="tnav-btn" id="testiNext" aria-controls="testimonialsTrack" aria-label="Testimonio siguiente" data-i18n-attr="aria-label:a11y.next"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M8.6 16.6L10 18l6-6-6-6-1.4 1.4L13.2 12z"/></svg></button>
         </div>
       </div>
     </div>
@@ -980,55 +743,57 @@
           <div class="form-row">
             <div class="field">
               <label for="name" data-i18n="contact.form.name">Nombre</label>
-              <input type="text" id="name" name="name" required>
+              <input type="text" id="name" name="name" autocomplete="name" required>
             </div>
             <div class="field">
               <label for="email" data-i18n="contact.form.email">Correo</label>
-              <input type="email" id="email" name="email" required>
+              <input type="email" id="email" name="email" autocomplete="email" required>
             </div>
           </div>
           <div class="field">
             <label for="tour" data-i18n="contact.form.tour">Expedición de interés</label>
             <select id="tour" name="tour">
-              <option data-i18n="tour1.name">Gran Sabana Clásica</option>
-              <option data-i18n="tour2.name">Ascenso al Roraima</option>
-              <option data-i18n="tour3.name">Salto Ángel (Canaima)</option>
-              <option data-i18n="tour4.name">Kavac</option>
-              <option data-i18n="tour6.name">Piedra del Elefante</option>
-              <option data-i18n="tour7.name">City Tour Histórico (Ciudad Bolívar)</option>
-              <option data-i18n="tour8.name">Paseo en Bote por el Caroní y el Orinoco</option>
-              <option data-i18n="tour5.name">Tour a medida / Expedición privada</option>
+              <option value="" data-i18n="contact.form.choose">Elige una expedición…</option>
+              <option value="Gran Sabana Clásica" data-i18n="tour1.name">Gran Sabana Clásica</option>
+              <option value="Ascenso al Roraima" data-i18n="tour2.name">Ascenso al Roraima</option>
+              <option value="Salto Ángel (Canaima)" data-i18n="tour3.name">Salto Ángel (Canaima)</option>
+              <option value="Kavac" data-i18n="tour4.name">Kavac</option>
+              <option value="Piedra del Elefante" data-i18n="tour6.name">Piedra del Elefante</option>
+              <option value="City Tour Histórico (Ciudad Bolívar)" data-i18n="tour7.name">City Tour Histórico (Ciudad Bolívar)</option>
+              <option value="Paseo en Bote por el Caroní y el Orinoco" data-i18n="tour8.name">Paseo en Bote por el Caroní y el Orinoco</option>
+              <option value="Tour a medida / Expedición privada" data-i18n="tour5.name">Tour a medida / Expedición privada</option>
             </select>
           </div>
           <div class="field">
             <label for="message" data-i18n="contact.form.message">Mensaje</label>
             <textarea id="message" name="message" required></textarea>
           </div>
+          <div class="field-hp" aria-hidden="true"><label for="gotcha">No completar</label><input type="text" id="gotcha" name="_gotcha" tabindex="-1" autocomplete="off"></div>
           <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">Enviar mensaje</button>
-          <p class="form-status" id="formStatus"></p>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
           <p class="form-note" data-i18n="contact.form.note">¿Prefieres respuesta inmediata? Escríbenos directo por WhatsApp.</p>
         </form>
       </div>
 
       <div class="contact-info reveal">
         <div class="info-card">
-          <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2z"/></svg></div>
+          <div class="info-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2z"/></svg></div>
           <div>
             <h4 data-i18n="contact.info.whatsapp">WhatsApp</h4>
-            <a href="#" class="wa-cta" target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/584249542480" class="wa-cta" target="_blank" rel="noopener noreferrer"
                data-wa-msg-es="Hola Ivarkarima, quiero información sobre sus expediciones."
                data-wa-msg-en="Hello Ivarkarima, I'd like information about your expeditions.">+58 424 954 2480</a>
           </div>
         </div>
         <div class="info-card">
-          <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg></div>
+          <div class="info-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg></div>
           <div>
             <h4 data-i18n="contact.info.email">Correo</h4>
             <a href="mailto:ivarkarima@gmail.com">ivarkarima@gmail.com</a>
           </div>
         </div>
         <div class="info-card">
-          <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg></div>
+          <div class="info-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg></div>
           <div>
             <h4 data-i18n="contact.info.location">Ubicación</h4>
             <p data-i18n="contact.info.locationText">Gran Sabana, Estado Bolívar, Venezuela</p>
@@ -1038,10 +803,10 @@
         <div>
           <h4 style="margin-bottom:12px;" data-i18n="contact.info.social">Síguenos</h4>
           <div class="social-links">
-            <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 01-1.15 1.77 4.9 4.9 0 01-1.77 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 01-1.77-1.15 4.9 4.9 0 01-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 015.45.53C6.09.28 6.82.11 7.88.06 8.94.01 9.28 0 12 0zm0 5a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zm5.2-8.4a1.2 1.2 0 100-2.4 1.2 1.2 0 000 2.4z"/></svg></a>
-            <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99H7.9v-2.89h2.54V9.8c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.89h-2.33v6.99C18.34 21.13 22 16.99 22 12z"/></svg></a>
-            <a href="#" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M16.5 2h-3v13.5a2.5 2.5 0 11-2.5-2.5c.17 0 .34.02.5.05V9.98a5.5 5.5 0 105.5 5.52V8.5c1 .7 2.2 1.1 3.5 1.1V6.6c-2.3 0-4-1.9-4-4.6z"/></svg></a>
-            <a href="#" aria-label="TripAdvisor" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M12 2C7.58 2 3.86 4.5 2.2 8.14L0 8v2h3.15A6.83 6.83 0 007 21a6.83 6.83 0 006.98-6.7l1 1.2 1-1.2A6.83 6.83 0 0021 21a6.83 6.83 0 003.85-11h3.15V8l-2.2.14C24.14 4.5 20.42 2 16 2h-4zM7 12a4 4 0 110 8 4 4 0 010-8zm10 0a4 4 0 110 8 4 4 0 010-8zM7 14.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3zm10 0a1.5 1.5 0 100 3 1.5 1.5 0 000-3z"/></svg></a>
+            <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 01-1.15 1.77 4.9 4.9 0 01-1.77 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 01-1.77-1.15 4.9 4.9 0 01-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 015.45.53C6.09.28 6.82.11 7.88.06 8.94.01 9.28 0 12 0zm0 5a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zm5.2-8.4a1.2 1.2 0 100-2.4 1.2 1.2 0 000 2.4z"/></svg></a>
+            <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99H7.9v-2.89h2.54V9.8c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.89h-2.33v6.99C18.34 21.13 22 16.99 22 12z"/></svg></a>
+            <a href="#" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M16.5 2h-3v13.5a2.5 2.5 0 11-2.5-2.5c.17 0 .34.02.5.05V9.98a5.5 5.5 0 105.5 5.52V8.5c1 .7 2.2 1.1 3.5 1.1V6.6c-2.3 0-4-1.9-4-4.6z"/></svg></a>
+            <a href="#" aria-label="TripAdvisor" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 2C7.58 2 3.86 4.5 2.2 8.14L0 8v2h3.15A6.83 6.83 0 007 21a6.83 6.83 0 006.98-6.7l1 1.2 1-1.2A6.83 6.83 0 0021 21a6.83 6.83 0 003.85-11h3.15V8l-2.2.14C24.14 4.5 20.42 2 16 2h-4zM7 12a4 4 0 110 8 4 4 0 010-8zm10 0a4 4 0 110 8 4 4 0 010-8zM7 14.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3zm10 0a1.5 1.5 0 100 3 1.5 1.5 0 000-3z"/></svg></a>
           </div>
         </div>
       </div>
@@ -1060,17 +825,17 @@
         <img src="assets/img/opt/logo-light.png" width="241" height="96" alt="Ivarkarima Expediciones" loading="lazy">
         <p data-i18n="footer.tagline">Expediciones a la Gran Sabana desde 1996. No somos turistas — somos de aquí.</p>
       </div>
-      <div class="footer-col">
-        <h5 data-i18n="footer.nav">Navegación</h5>
+      <nav class="footer-col" aria-labelledby="footer-nav-title">
+        <h2 class="footer-heading" id="footer-nav-title" data-i18n="footer.nav">Navegación</h2>
         <ul>
           <li><a href="#nosotros" data-i18n="nav.about">Nosotros</a></li>
           <li><a href="#expediciones" data-i18n="nav.tours">Expediciones</a></li>
           <li><a href="#destinos" data-i18n="nav.destinations">Destinos</a></li>
           <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
         </ul>
-      </div>
+      </nav>
       <div class="footer-col">
-        <h5 data-i18n="footer.legalTitle">Legal</h5>
+        <h2 class="footer-heading" data-i18n="footer.legalTitle">Legal</h2>
         <ul>
           <li><a href="privacy.html" data-i18n="footer.privacy">Política de Privacidad y Uso de Imágenes</a></li>
           <li><a href="terms.html" data-i18n="footer.terms">Términos y Condiciones</a></li>
@@ -1086,8 +851,250 @@
   </div>
 </footer>
 
+<!-- ============================================================
+     DIÁLOGOS (fuera de <main> para poder volver inerte el fondo)
+============================================================ -->
+<!-- ============================================================
+     MODALES DE ITINERARIO COMPLETO ("Ver más" de cada tour)
+============================================================ -->
+
+<!-- Modal: itinerario completo — Salto Ángel -->
+<div class="tour-modal" id="modal-tour3" role="dialog" aria-modal="true" aria-labelledby="modal-tour3-title">
+  <div class="tour-modal-panel">
+    <button type="button" class="tour-modal-close" data-dialog-close aria-label="Cerrar" data-i18n-attr="aria-label:a11y.close"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></svg></button>
+    <span class="tour-modal-duration" data-i18n="tour3.duration">3 días / 2 noches</span>
+    <h3 class="tour-modal-title" id="modal-tour3-title" data-i18n="tour3.m.title">Salto Ángel (Canaima) — itinerario completo</h3>
+    <p class="tour-modal-intro" data-i18n="tour3.m.intro">Tres días y dos noches para llegar hasta el Kerepakupai Vená, la caída de agua más alta del mundo, navegando en curiara por los ríos Carrao y Churún.</p>
+
+    <div class="tour-modal-day">
+      <h4 data-i18n="tour3.m.d1.title">Día 1 — Llegada y exploración de la Laguna de Canaima</h4>
+      <div class="itinerary-schedule">
+        <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.morning">Mañana</span><div class="itinerary-info"><p data-i18n="tour3.m.d1.r1">Arribo en avión al aeródromo de Canaima (vuelo desde Caracas, Puerto Ordaz o Ciudad Bolívar). Recibimiento por los guías locales de la etnia Pemón y traslado a la posada para dejar el equipaje.</p></div></div>
+        <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.lunch">Almuerzo</span><div class="itinerary-info"><p data-i18n="tour3.m.d1.r2">Comida típica en el campamento.</p></div></div>
+        <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.afternoon">Tarde</span><div class="itinerary-info"><p data-i18n="tour3.m.d1.r3">Excursión en curiara (embarcación indígena motorizada) navegando la Laguna de Canaima. Desembarco en Salto El Sapo y Salto El Hacha, con caminata por el sendero detrás de la cortina de agua.</p></div></div>
+        <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.night">Noche</span><div class="itinerary-info"><p data-i18n="tour3.m.d1.r4">Cena y pernocta en posada/campamento, con cama y ventilador.</p></div></div>
+      </div>
+    </div>
+
+    <div class="tour-modal-day">
+      <h4 data-i18n="tour3.m.d2.title">Día 2 — Expedición al Salto Ángel (Kerepakupai Vená)</h4>
+      <div class="itinerary-schedule">
+        <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.dawn">Madrugada</span><div class="itinerary-info"><p data-i18n="tour3.m.d2.r1">Desayuno temprano e inicio del traslado fluvial río arriba por el Río Carrao y luego por el Río Churún hacia el Auyantepuy, bordeando la Sabana de Mayupa y la Isla Orquídea (navegación de 4 a 5 horas aprox.).</p></div></div>
+        <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.midday">Mediodía</span><div class="itinerary-info"><p data-i18n="tour3.m.d2.r2">Llegada a Isla Ratón (frente al Auyantepuy) e inicio de un trekking de 1 a 1.5 horas por la selva hasta el Mirador Laime.</p></div></div>
+        <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.afternoon">Tarde</span><div class="itinerary-info"><p data-i18n="tour3.m.d2.r3">Vista al Salto Ángel en todo su esplendor, con posibilidad de nadar en la poza natural de la base (según clima y caudal del río). Retorno a la base.</p></div></div>
+        <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.night">Noche</span><div class="itinerary-info"><p data-i18n="tour3.m.d2.r4">Cena en el campamento rústico frente al Salto Ángel y pernocta tradicional en hamacas con mosquitero.</p></div></div>
+      </div>
+    </div>
+
+    <div class="tour-modal-day">
+      <h4 data-i18n="tour3.m.d3.title">Día 3 — Retorno a Canaima y vuelo de salida</h4>
+      <div class="itinerary-schedule">
+        <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.morning">Mañana</span><div class="itinerary-info"><p data-i18n="tour3.m.d3.r1">Desayuno al amanecer sobre el Auyantepuy y embarque en las curiaras para navegar río abajo de regreso al pueblo de Canaima.</p></div></div>
+        <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.midday">Mediodía</span><div class="itinerary-info"><p data-i18n="tour3.m.d3.r2">Tiempo libre para comprar artesanía Pemón, visitar la playa de la laguna o tomar un baño final.</p></div></div>
+        <div class="itinerary-row"><span class="itinerary-time" data-i18n="daypart.afternoon">Tarde</span><div class="itinerary-info"><p data-i18n="tour3.m.d3.r3">Traslado al aeródromo de Canaima para el vuelo de retorno.</p></div></div>
+      </div>
+    </div>
+
+    <div class="tour-modal-section">
+      <h4 data-i18n="tour3.m.inc.title">Qué suele incluir el paquete</h4>
+      <ul class="tour-includes">
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.m.inc.i1">Boletos aéreos e impuestos de parque</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.m.inc.i2">Comidas completas y bebidas no alcohólicas</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.m.inc.i3">Guiatura en español/inglés y traslados fluviales</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.m.inc.i4">Hospedaje: 1 noche en cama (posada) y 1 noche en hamaca (campamento en la selva)</span></li>
+      </ul>
+    </div>
+
+    <div class="tour-modal-section">
+      <h4 data-i18n="tour3.m.gear.title">Indumentaria y equipo recomendado</h4>
+      <ul class="tour-includes">
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.m.gear.i1">Ropa de secado rápido (manga larga para sol y mosquitos)</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.m.gear.i2">Impermeable o poncho (esencial tras las cascadas y en los trayectos en bote)</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.m.gear.i3">Calzado cómodo con buen agarre y sandalias acuáticas</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.m.gear.i4">Bolsa estanca/seca para proteger cámaras y celulares</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour3.m.gear.i5">Repelente de insectos y protector solar</span></li>
+      </ul>
+    </div>
+
+    <a href="https://wa.me/584249542480" class="btn btn-primary btn-block tour-cta wa-cta"
+       data-wa-msg-es="Hola Ivarkarima, me interesa el tour Salto Ángel / Canaima (3 días / 2 noches). ¿Me dan más información?"
+       data-wa-msg-en="Hello Ivarkarima, I'm interested in the Angel Falls / Canaima tour (3 days / 2 nights). Could you send more information?"
+       target="_blank" rel="noopener noreferrer">
+      <span data-i18n="tour.cta">Consultar precio →</span>
+    </a>
+  </div>
+</div>
+
+<!-- Modal: itinerario completo — Piedra del Elefante -->
+<div class="tour-modal" id="modal-tour6" role="dialog" aria-modal="true" aria-labelledby="modal-tour6-title">
+  <div class="tour-modal-panel">
+    <button type="button" class="tour-modal-close" data-dialog-close aria-label="Cerrar" data-i18n-attr="aria-label:a11y.close"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></svg></button>
+    <span class="tour-modal-duration" data-i18n="tour6.duration">Día completo</span>
+    <h3 class="tour-modal-title" id="modal-tour6-title" data-i18n="tour6.m.title">Piedra del Elefante — itinerario completo</h3>
+    <p class="tour-modal-intro" data-i18n="tour6.m.intro">Este plan combina el ascenso a la icónica formación rocosa del Escudo Guayanés con un descanso activo en las instalaciones del campamento recreacional adyacente.</p>
+
+    <div class="tour-modal-section">
+      <div class="itinerary-schedule">
+        <div class="itinerary-row">
+          <span class="itinerary-time">07:00 AM – 07:30 AM</span>
+          <div class="itinerary-info">
+            <h5 data-i18n="tour6.m.r1.act">Llegada y registro</h5>
+            <p data-i18n="tour6.m.r1.det">Encuentro en el Campamento Recreacional Piedra del Elefante. Charla de seguridad e hidratación inicial.</p>
+          </div>
+        </div>
+        <div class="itinerary-row">
+          <span class="itinerary-time">07:30 AM – 09:30 AM</span>
+          <div class="itinerary-info">
+            <h5 data-i18n="tour6.m.r2.act">Ascenso al monolito</h5>
+            <p data-i18n="tour6.m.r2.det">Caminata hacia la cima de la Piedra del Elefante. Es clave subir temprano para evitar la radiación solar intensa sobre el granito.</p>
+          </div>
+        </div>
+        <div class="itinerary-row">
+          <span class="itinerary-time">09:30 AM – 10:30 AM</span>
+          <div class="itinerary-info">
+            <h5 data-i18n="tour6.m.r3.act">Cumbre y fotografía</h5>
+            <p data-i18n="tour6.m.r3.det">Tiempo libre en la cima para contemplar la vista panorámica del río Caroní, la vegetación de sabana y tomar fotografías.</p>
+          </div>
+        </div>
+        <div class="itinerary-row">
+          <span class="itinerary-time">10:30 AM – 11:30 AM</span>
+          <div class="itinerary-info">
+            <h5 data-i18n="tour6.m.r4.act">Descenso al campamento</h5>
+            <p data-i18n="tour6.m.r4.det">Retorno guiado hacia la base, aprovechando el sendero para avistamiento de fauna y flora típica.</p>
+          </div>
+        </div>
+        <div class="itinerary-row">
+          <span class="itinerary-time">11:30 AM – 01:00 PM</span>
+          <div class="itinerary-info">
+            <h5 data-i18n="tour6.m.r5.act">Almuerzo y descanso</h5>
+            <p data-i18n="tour6.m.r5.det">Uso de churuatas en el campamento para almorzar (comida rápida, parrilla o sancocho) y reposar a la sombra.</p>
+          </div>
+        </div>
+        <div class="itinerary-row">
+          <span class="itinerary-time">01:00 PM – 02:30 PM</span>
+          <div class="itinerary-info">
+            <h5 data-i18n="tour6.m.r6.act">Actividades recreativas</h5>
+            <p data-i18n="tour6.m.r6.det">Uso de la piscina del campamento, áreas verdes, canchas de juegos o paseos en kayak (según disponibilidad del centro).</p>
+          </div>
+        </div>
+        <div class="itinerary-row">
+          <span class="itinerary-time">02:30 PM – 03:00 PM</span>
+          <div class="itinerary-info">
+            <h5 data-i18n="tour6.m.r7.act">Cierre y retorno</h5>
+            <p data-i18n="tour6.m.r7.det">Recogida de pertenencias, hidratación final y salida de las instalaciones.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="https://wa.me/584249542480" class="btn btn-primary btn-block tour-cta wa-cta"
+       data-wa-msg-es="Hola Ivarkarima, me interesa la excursión a la Piedra del Elefante (día completo). ¿Me dan más información?"
+       data-wa-msg-en="Hello Ivarkarima, I'm interested in the Elephant Rock excursion (full day). Could you send more information?"
+       target="_blank" rel="noopener noreferrer">
+      <span data-i18n="tour.cta">Consultar precio →</span>
+    </a>
+  </div>
+</div>
+
+<!-- Modal: itinerario completo — City Tour Ciudad Bolívar -->
+<div class="tour-modal" id="modal-tour7" role="dialog" aria-modal="true" aria-labelledby="modal-tour7-title">
+  <div class="tour-modal-panel">
+    <button type="button" class="tour-modal-close" data-dialog-close aria-label="Cerrar" data-i18n-attr="aria-label:a11y.close"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></svg></button>
+    <span class="tour-modal-duration" data-i18n="tour7.duration">6 horas</span>
+    <h3 class="tour-modal-title" id="modal-tour7-title" data-i18n="tour7.m.title">City Tour Histórico (Ciudad Bolívar) — itinerario completo</h3>
+    <p class="tour-modal-intro" data-i18n="tour7.m.intro">El City Tour Histórico en Ciudad Bolívar, saliendo desde Puerto Ordaz, abarca en 6 horas los aspectos más representativos de la capital histórica de Venezuela.</p>
+
+    <div class="tour-modal-section">
+      <ul class="tour-modal-list">
+        <li data-i18n-html="tour7.m.l1"><strong>Traslado y cruce sobre el río Orinoco</strong> (~1 h 15 min de ida): salida desde Puerto Ordaz rumbo a Ciudad Bolívar cruzando el icónico Puente Angostura.</li>
+        <li>
+          <span data-i18n-html="tour7.m.l2"><strong>Recorrido a pie por el Casco Histórico:</strong> visita guiada alrededor de la Plaza Bolívar:</span>
+          <ul class="tour-modal-sublist">
+            <li data-i18n-html="tour7.m.l2.s1"><strong>Casa del Congreso de Angostura:</strong> lugar donde Simón Bolívar pronunció su célebre discurso en 1819.</li>
+            <li data-i18n-html="tour7.m.l2.s2"><strong>Catedral Metropolitana de Ciudad Bolívar:</strong> templo de arquitectura colonial frente a la plaza principal.</li>
+            <li data-i18n-html="tour7.m.l2.s3"><strong>Casa de la XII Angustia / Casa San Isidro:</strong> quinta donde el Libertador residió y preparó documentos históricos.</li>
+            <li data-i18n-html="tour7.m.l2.s4"><strong>Muro de Fusilamiento de Manuel Piar:</strong> detalle histórico junto al costado de la catedral.</li>
+          </ul>
+        </li>
+        <li data-i18n-html="tour7.m.l3"><strong>Paseo del Orinoco y Piedra del Medio:</strong> caminata con vista panorámica hacia el majestuoso río Orinoco.</li>
+        <li data-i18n-html="tour7.m.l4"><strong>Tiempo para gastronomía local:</strong> breve parada para degustar platos o dulces típicos de la región (como el queso de mano o la sapoara, según la época).</li>
+        <li data-i18n-html="tour7.m.l5"><strong>Retorno a Puerto Ordaz</strong> (~1 h 15 min de regreso).</li>
+      </ul>
+    </div>
+
+    <div class="tour-modal-section">
+      <h4 data-i18n="tour7.m.det.title">Detalles clave</h4>
+      <ul class="tour-includes">
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour7.m.det.i1">Duración: 6 horas en total (incluyendo trayectos de traslado)</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour7.m.det.i2">Modalidad: transporte terrestre privado/turístico más caminata guiada a pie en la zona colonial</span></li>
+        <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span data-i18n="tour7.m.det.i3">Recomendaciones: ropa fresca, calzado cómodo para empedrado, protector solar e hidratación</span></li>
+      </ul>
+    </div>
+
+    <a href="https://wa.me/584249542480" class="btn btn-primary btn-block tour-cta wa-cta"
+       data-wa-msg-es="Hola Ivarkarima, me interesa el City Tour Histórico de Ciudad Bolívar (6 horas). ¿Me dan más información?"
+       data-wa-msg-en="Hello Ivarkarima, I'm interested in the Historic City Tour of Ciudad Bolívar (6 hours). Could you send more information?"
+       target="_blank" rel="noopener noreferrer">
+      <span data-i18n="tour.cta">Consultar precio →</span>
+    </a>
+  </div>
+</div>
+
+<!-- Modal: itinerario completo — Paseo en Bote Caroní-Orinoco -->
+<div class="tour-modal" id="modal-tour8" role="dialog" aria-modal="true" aria-labelledby="modal-tour8-title">
+  <div class="tour-modal-panel">
+    <button type="button" class="tour-modal-close" data-dialog-close aria-label="Cerrar" data-i18n-attr="aria-label:a11y.close"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></svg></button>
+    <span class="tour-modal-duration" data-i18n="tour8.duration">2 horas</span>
+    <h3 class="tour-modal-title" id="modal-tour8-title" data-i18n="tour8.m.title">Paseo en Bote — Caroní y Orinoco — itinerario completo</h3>
+    <p class="tour-modal-intro" data-i18n="tour8.m.intro">Un paseo de dos horas en bote desde el Club Náutico de Puerto Ordaz ofrece un recorrido intenso y visualmente impactante por la confluencia de dos de los ríos más importantes de Venezuela y sus saltos de agua asociados.</p>
+
+    <div class="tour-modal-section">
+      <ul class="tour-modal-list">
+        <li data-i18n-html="tour8.m.l1"><strong>Salida: Club Náutico de Puerto Ordaz.</strong> El recorrido comienza navegando las aguas oscuras y tranquilas del río Caroní, con vegetación ribereña densa e infraestructura industrial a lo lejos, típica de la zona de Guayana.</li>
+        <li>
+          <span data-i18n-html="tour8.m.l2"><strong>El encuentro de las aguas (confluencia Caroní–Orinoco).</strong> El fenómeno central del paseo: a pocos minutos de navegación, la lancha se aproxima al punto donde el río Caroní desemboca en el inmenso río Orinoco.</span>
+          <ul class="tour-modal-sublist">
+            <li data-i18n-html="tour8.m.l2.s1"><strong>El contraste:</strong> una línea divisoria natural muy definida — de un lado, las aguas oscuras y casi negras del Caroní, ricas en ácidos húmicos; del otro, las aguas turbias y amarillentas del Orinoco, cargadas de sedimentos.</li>
+            <li data-i18n-html="tour8.m.l2.s2"><strong>La dinámica:</strong> las diferentes densidades y temperaturas de ambos ríos hacen que tarden varios kilómetros en mezclarse por completo — el bote suele navegar sobre esa línea.</li>
+          </ul>
+        </li>
+        <li>
+          <span data-i18n-html="tour8.m.l3"><strong>Navegación hacia el Parque Cachamay.</strong> Dejando atrás el encuentro, la embarcación remonta el río en dirección al Parque Cachamay.</span>
+          <ul class="tour-modal-sublist">
+            <li data-i18n-html="tour8.m.l3.s1"><strong>Los Saltos de Cachamay:</strong> el bote se acerca a los rápidos y cascadas, con la fuerza del río estrellándose contra las rocas entre abundante vegetación. Se siente el rocío y se escucha el estruendo del agua.</li>
+          </ul>
+        </li>
+        <li>
+          <span data-i18n-html="tour8.m.l4"><strong>Visita al Parque La Llovizna.</strong> La lancha se dirige hacia el sistema de caídas de agua de La Llovizna, otra sección vital del río Caroní inferior.</span>
+          <ul class="tour-modal-sublist">
+            <li data-i18n-html="tour8.m.l4.s1"><strong>El Salto La Llovizna:</strong> el salto más famoso del parque — el bote se aproxima a la base de la cascada principal.</li>
+            <li data-i18n-html="tour8.m.l4.s2"><strong>La experiencia:</strong> la caída de agua genera una fina llovizna constante que cubre el área, entre bosque de galería exuberante y múltiples brazos de agua sobre las rocas oscuras del Escudo Guayanés.</li>
+          </ul>
+        </li>
+        <li data-i18n-html="tour8.m.l5"><strong>Retorno.</strong> El viaje concluye con la navegación de regreso al Club Náutico de Puerto Ordaz, completando el circuito de aproximadamente dos horas.</li>
+      </ul>
+    </div>
+
+    <a href="https://wa.me/584249542480" class="btn btn-primary btn-block tour-cta wa-cta"
+       data-wa-msg-es="Hola Ivarkarima, me interesa el paseo en bote Caroní-Orinoco (Cachamay y La Llovizna). ¿Me dan más información?"
+       data-wa-msg-en="Hello Ivarkarima, I'm interested in the Caroní-Orinoco boat ride (Cachamay and La Llovizna). Could you send more information?"
+       target="_blank" rel="noopener noreferrer">
+      <span data-i18n="tour.cta">Consultar precio →</span>
+    </a>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada" data-i18n-attr="aria-label:a11y.lightbox">
+  <button type="button" class="lightbox-close" id="lightboxClose" data-dialog-close aria-label="Cerrar" data-i18n-attr="aria-label:a11y.close"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></svg></button>
+  <div class="lightbox-content">
+    <img alt="" id="lightboxImg">
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+</div>
+
 <!-- Botón flotante de WhatsApp -->
-<a href="#" class="whatsapp-float wa-cta" target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp"
+<a href="https://wa.me/584249542480" class="whatsapp-float wa-cta" target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp" data-i18n-attr="aria-label:a11y.waFloat"
    data-wa-msg-es="Hola Ivarkarima, quiero información sobre sus expediciones."
    data-wa-msg-en="Hello Ivarkarima, I'd like information about your expeditions.">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 01-1.26-4.38c0-4.54 3.7-8.23 8.26-8.23 2.2 0 4.27.86 5.82 2.42a8.17 8.17 0 012.41 5.82c-.01 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.76-1.84-.2-.48-.4-.42-.56-.43l-.48-.01c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.07-.1-.23-.16-.48-.28z"/></svg>

@@ -15,6 +15,26 @@ window.IVK_I18N = {
     "nav.contact": "Contacto",
     "nav.cta": "Reservar por WhatsApp",
 
+    "meta.title": "Ivarkarima Expediciones — Tours a la Gran Sabana, Roraima y Salto Ángel | Venezuela",
+    "meta.desc": "Expediciones por la Gran Sabana venezolana desde 1996: Monte Roraima, Salto Ángel, Canaima y Kavac con guías nativos Pemón bilingües. Reserva por WhatsApp.",
+    "a11y.skip": "Saltar al contenido",
+    "a11y.mainNav": "Navegación principal",
+    "a11y.mobileNav": "Navegación móvil",
+    "a11y.footerNav": "Navegación del pie de página",
+    "a11y.langSwitch": "Selector de idioma",
+    "a11y.menu": "Menú",
+    "a11y.close": "Cerrar",
+    "a11y.prev": "Testimonio anterior",
+    "a11y.next": "Testimonio siguiente",
+    "a11y.carousel": "Testimonios de viajeros",
+    "a11y.waFloat": "Escríbenos por WhatsApp",
+    "a11y.lightbox": "Imagen ampliada",
+    "a11y.home": "Ivarkarima Expediciones — inicio",
+    "hero.img.alt": "Vista del tepuy Roraima al amanecer en la Gran Sabana",
+    "tour1.img.alt": "Tepuy Roraima sobre la Gran Sabana",
+    "gallery.1.caption": "Monte Roraima al amanecer",
+    "placeholder.label": "Foto próximamente",
+
     "hero.badge": "Guías nativos Pemón · Desde 1996",
     "hero.title": "Expediciones al corazón de <em>la Gran Sabana</em>",
     "hero.subtitle": "Casi 30 años guiando viajeros por el Roraima, Canaima y los tepuyes de Venezuela. No somos turistas — somos de aquí.",
@@ -228,6 +248,7 @@ window.IVK_I18N = {
     "testi.title": "Lo que dicen <em>nuestros viajeros</em>",
     "testi.subtitle": "Reseñas de ejemplo — reemplázalas por opiniones reales de tus viajeros (Google, TripAdvisor, WhatsApp).",
     "testi.example": "Reseña de ejemplo",
+    "testi.stars": "5 de 5 estrellas",
     "testi1.quote": "“Una experiencia que cambia la forma en que ves la naturaleza. El equipo conoce cada rincón como si fuera su propia casa.”",
     "testi1.name": "[Nombre del viajero]",
     "testi1.origin": "[País de origen]",
@@ -268,6 +289,13 @@ window.IVK_I18N = {
     "contact.form.message": "Mensaje",
     "contact.form.submit": "Enviar mensaje",
     "contact.form.note": "¿Prefieres respuesta inmediata? Escríbenos directo por WhatsApp.",
+    "contact.form.choose": "Elige una expedición…",
+    "contact.form.sending": "Enviando…",
+    "contact.form.success": "¡Mensaje enviado! Te responderemos pronto.",
+    "contact.form.error": "No pudimos enviar tu mensaje. Escríbenos por WhatsApp y te respondemos enseguida:",
+    "contact.form.unavailable": "Por ahora atendemos las consultas por WhatsApp. Pulsa el enlace y tu mensaje llegará ya escrito:",
+    "contact.form.waLink": "Enviar por WhatsApp",
+    "contact.form.waIntro": "Hola Ivarkarima, les escribo desde la web.",
     "contact.info.whatsapp": "WhatsApp",
     "contact.info.email": "Correo",
     "contact.info.location": "Ubicación",
@@ -291,6 +319,26 @@ window.IVK_I18N = {
     "nav.testimonials": "Testimonials",
     "nav.contact": "Contact",
     "nav.cta": "Book on WhatsApp",
+
+    "meta.title": "Ivarkarima Expediciones — Gran Sabana, Roraima & Angel Falls Tours | Venezuela",
+    "meta.desc": "Expeditions across Venezuela's Gran Sabana since 1996: Mount Roraima, Angel Falls, Canaima and Kavac with bilingual native Pemón guides. Book on WhatsApp.",
+    "a11y.skip": "Skip to content",
+    "a11y.mainNav": "Main navigation",
+    "a11y.mobileNav": "Mobile navigation",
+    "a11y.footerNav": "Footer navigation",
+    "a11y.langSwitch": "Language selector",
+    "a11y.menu": "Menu",
+    "a11y.close": "Close",
+    "a11y.prev": "Previous testimonial",
+    "a11y.next": "Next testimonial",
+    "a11y.carousel": "Traveler testimonials",
+    "a11y.waFloat": "Message us on WhatsApp",
+    "a11y.lightbox": "Enlarged image",
+    "a11y.home": "Ivarkarima Expediciones — home",
+    "hero.img.alt": "View of the Roraima tepui at dawn over the Gran Sabana",
+    "tour1.img.alt": "Roraima tepui above the Gran Sabana",
+    "gallery.1.caption": "Mount Roraima at dawn",
+    "placeholder.label": "Photo coming soon",
 
     "hero.badge": "Native Pemón guides · Since 1996",
     "hero.title": "Expeditions into the heart of <em>the Gran Sabana</em>",
@@ -505,6 +553,7 @@ window.IVK_I18N = {
     "testi.title": "What our <em>travelers say</em>",
     "testi.subtitle": "Sample reviews — replace these with real feedback from your travelers (Google, TripAdvisor, WhatsApp).",
     "testi.example": "Sample review",
+    "testi.stars": "5 out of 5 stars",
     "testi1.quote": "“An experience that changes the way you see nature. The team knows every corner like their own backyard.”",
     "testi1.name": "[Traveler's name]",
     "testi1.origin": "[Country of origin]",
@@ -545,6 +594,13 @@ window.IVK_I18N = {
     "contact.form.message": "Message",
     "contact.form.submit": "Send message",
     "contact.form.note": "Prefer an instant reply? Message us directly on WhatsApp.",
+    "contact.form.choose": "Choose an expedition…",
+    "contact.form.sending": "Sending…",
+    "contact.form.success": "Message sent — we'll be in touch soon!",
+    "contact.form.error": "We couldn't send your message. Message us on WhatsApp and we'll reply right away:",
+    "contact.form.unavailable": "For now we handle inquiries on WhatsApp. Tap the link and your message will arrive already written:",
+    "contact.form.waLink": "Send via WhatsApp",
+    "contact.form.waIntro": "Hello Ivarkarima, I'm writing from your website.",
     "contact.info.whatsapp": "WhatsApp",
     "contact.info.email": "Email",
     "contact.info.location": "Location",
@@ -562,12 +618,31 @@ window.IVK_I18N = {
 
 (function () {
   var STORAGE_KEY = "ivk-lang";
+  var WA_BASE = "https://wa.me/584249542480";
+
+  // localStorage puede lanzar (modo privado, cookies bloqueadas): nunca debe
+  // impedir que se aplique la traducción ni que se generen los enlaces.
+  function readStoredLang() {
+    try { return window.localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
+  }
+  function storeLang(lang) {
+    try { window.localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* sin persistencia */ }
+  }
 
   function getInitialLang() {
-    var saved = localStorage.getItem(STORAGE_KEY);
+    var saved = readStoredLang();
     if (saved && window.IVK_I18N[saved]) return saved;
     var browserLang = (navigator.language || "es").slice(0, 2);
     return window.IVK_I18N[browserLang] ? browserLang : "es";
+  }
+
+  function t(key, lang) {
+    var dict = window.IVK_I18N[lang || window.IVK_CURRENT_LANG || "es"] || {};
+    return dict[key] !== undefined ? dict[key] : (window.IVK_I18N.es[key] || "");
+  }
+
+  function waHref(msg) {
+    return msg ? WA_BASE + "?text=" + encodeURIComponent(msg) : WA_BASE;
   }
 
   function applyLang(lang) {
@@ -575,6 +650,9 @@ window.IVK_I18N = {
     if (!dict) return;
 
     document.documentElement.lang = lang;
+    if (dict["meta.title"]) document.title = dict["meta.title"];
+    var metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && dict["meta.desc"]) metaDesc.setAttribute("content", dict["meta.desc"]);
 
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       var key = el.getAttribute("data-i18n");
@@ -586,17 +664,34 @@ window.IVK_I18N = {
       if (dict[key] !== undefined) el.innerHTML = dict[key];
     });
 
+    // data-i18n-attr="aria-label:clave; alt:otra.clave"
+    document.querySelectorAll("[data-i18n-attr]").forEach(function (el) {
+      el.getAttribute("data-i18n-attr").split(";").forEach(function (pair) {
+        var parts = pair.split(":");
+        var attr = (parts[0] || "").trim();
+        var key = (parts[1] || "").trim();
+        if (attr && dict[key] !== undefined) el.setAttribute(attr, dict[key]);
+      });
+    });
+
     document.querySelectorAll(".lang-switch button").forEach(function (btn) {
-      btn.classList.toggle("is-active", btn.getAttribute("data-lang") === lang);
+      var active = btn.getAttribute("data-lang") === lang;
+      btn.classList.toggle("is-active", active);
+      btn.setAttribute("aria-pressed", String(active));
     });
 
     document.querySelectorAll(".wa-cta").forEach(function (a) {
       var msg = a.getAttribute("data-wa-msg-" + lang) || a.getAttribute("data-wa-msg-es");
-      if (msg) a.setAttribute("href", "https://wa.me/584249542480?text=" + encodeURIComponent(msg));
+      a.setAttribute("href", waHref(msg));
     });
 
-    localStorage.setItem(STORAGE_KEY, lang);
+    storeLang(lang);
     window.IVK_CURRENT_LANG = lang;
+
+    var evt;
+    try { evt = new CustomEvent("ivk:langchange", { detail: { lang: lang } }); }
+    catch (e) { evt = document.createEvent("CustomEvent"); evt.initCustomEvent("ivk:langchange", false, false, { lang: lang }); }
+    document.dispatchEvent(evt);
   }
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -610,4 +705,6 @@ window.IVK_I18N = {
   });
 
   window.IVK_applyLang = applyLang;
+  window.IVK_t = t;
+  window.IVK_waHref = waHref;
 })();

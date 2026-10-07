@@ -1,1 +1,4 @@
 node_modules/
+# Originales enviados por WhatsApp (fotos y vídeos sin procesar).
+# Las fotos elegidas se copian a assets/img/src/ con nombres claros.
+assets/img/Fotos/

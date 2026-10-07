@@ -37,17 +37,23 @@ El español vive directamente en `index.html` (atributos `data-i18n="clave"` o `
 
 Para agregar italiano (opcional, mencionado en el brief): añade un bloque `it: { ... }` en `js/i18n.js` con las mismas claves, y agrega un botón `<button data-lang="it">IT</button>` junto a los de ES/EN en el header (`index.html`) y en el `.lang-switch` del menú.
 
-## Cómo reemplazar fotos y placeholders
+## Fotos
 
-Las fotos pendientes (galería, destinos, foto del fundador, tours 02–08) se muestran como un paisaje de marca decorativo (`<div class="photo-placeholder">`) y están marcadas en `index.html` con el comentario `<!-- FOTO PENDIENTE -->`. Para poner una foto real:
+Todas las fotos pasan por `scripts/optimize-images.js` (requiere `npm install`):
 
-1. Copia el original en `assets/img/` (por ejemplo `kavac.jpg`, idealmente ≥ 1920 px de ancho).
-2. Añádelo a la lista `PHOTOS` de `scripts/optimize-images.js` y ejecuta `node scripts/optimize-images.js` (requiere `npm install`). Se generan AVIF/WebP/JPG a 640/1280/1920 px en `assets/img/opt/`.
-3. Reemplaza el `<div class="photo-placeholder">…</div>` por un `<picture>` igual al de la tarjeta del tour 01 (cambia el nombre de archivo y el `alt`). En la galería, cambia además el `<div class="gallery-item is-placeholder">` por `<button type="button" class="gallery-item" data-full="assets/img/opt/tu-foto-1920.webp" data-caption="…">` para que abra el visor.
+1. El original va a `assets/img/src/` con un nombre claro (por ejemplo `kavac-canon.jpg`).
+2. En la lista `SLOTS` del script, cada hueco de la web indica su foto, su tipo y su punto focal. Los tipos fijan la proporción para que todo cuadre: `card` 16:10 (tarjetas de expediciones), `dest` 4:5 (destinos y "Nosotros") y `gallery` 4:3 (galería).
+3. `node scripts/optimize-images.js` genera AVIF/WebP/JPG en `assets/img/opt/` y los anchos reales en `assets/img/opt/photos.json`.
+
+Para cambiar una foto basta con cambiar el `src` (y el `focus` si hace falta) de su hueco y volver a ejecutar el script; el HTML no cambia mientras el nombre del hueco sea el mismo.
+
+Las fotos de terceros vienen de Wikimedia Commons con licencias CC BY / CC BY-SA. Sus autores y licencias están en `assets/img/src/credits.json` y en la página pública `creditos.html` (enlazada en el pie). Si reemplazas una por una foto propia, quítala también de esos dos sitios.
+
+Los originales enviados por WhatsApp están en `assets/img/Fotos/` y no se suben a git (ver `.gitignore`).
 
 ## Testimonios
 
-Los testimonios actuales son **de ejemplo** (marcados con la etiqueta "Reseña de ejemplo" / "Sample review"). Reemplaza el nombre, país y cita en `index.html` (sección `#testimonios`) y en `js/i18n.js` (claves `testi1.*`, `testi2.*`, `testi3.*`) con opiniones reales de viajeros.
+La sección está **oculta** (atributo `hidden` en `#testimonios` y enlaces del menú comentados) hasta tener reseñas reales. Los testimonios actuales son **de ejemplo** (marcados con la etiqueta "Reseña de ejemplo" / "Sample review"). Reemplaza el nombre, país y cita en `index.html` (sección `#testimonios`) y en `js/i18n.js` (claves `testi1.*`, `testi2.*`, `testi3.*`) con opiniones reales de viajeros.
 
 ## Formulario de contacto
 
@@ -57,7 +63,7 @@ El formulario no tiene backend propio; usa [Formspree](https://formspree.io) (pl
 2. Copia tu Form ID.
 3. En `index.html`, reemplaza `YOUR_FORM_ID` en `<form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" ...>` por tu ID real.
 
-Mientras no se configure, el formulario no envía nada: muestra un aviso con un enlace de WhatsApp que ya lleva escrito el mensaje del visitante.
+Mientras no se configure, el botón dice "Enviar por WhatsApp" y abre WhatsApp con el mensaje del visitante ya escrito (nombre, expedición y texto). Al poner el ID real, el formulario pasa solo a enviar por correo.
 
 ## Datos pendientes de completar
 

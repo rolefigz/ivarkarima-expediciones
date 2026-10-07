@@ -322,15 +322,22 @@ document.addEventListener("DOMContentLoaded", function () {
   if (form && status) {
     var submitBtn = form.querySelector('button[type="submit"]');
     var sending = false;
+    var formspreeReady = (form.getAttribute("action") || "").indexOf("YOUR_FORM_ID") === -1;
+
+    // Sin Formspree configurado, el formulario envía la consulta por WhatsApp
+    if (!formspreeReady) {
+      submitBtn.setAttribute("data-i18n", "contact.form.submitWa");
+      submitBtn.textContent = t("contact.form.submitWa");
+    }
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (sending) return;
 
       var action = form.getAttribute("action") || "";
-      // Formspree aún sin configurar: se ofrece el mismo mensaje por WhatsApp
-      if (action.indexOf("YOUR_FORM_ID") !== -1) {
-        showStatus("info", "contact.form.unavailable", true);
+      if (!formspreeReady) {
+        window.open(waLinkFromForm(), "_blank", "noopener");
+        showStatus("info", "contact.form.opened", true);
         return;
       }
 
